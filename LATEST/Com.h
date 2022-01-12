@@ -1,50 +1,51 @@
 #pragma once
 
 #include "Std_Types.h"
+#include "Compiler_Cfg_Com.h"
 
 class class_Com{
    public:
-      void InitFunction                (void);
-      void DeInitFunction              (void);
-      void IpduGroupStart              (void);
-      void IpduGroupStop               (void);
-      void EnableReceptionDM           (void);
-      void DisableReceptionDM          (void);
-      void GetStatus                   (void);
-      void GetVersionInfo              (void);
-      void SendSignal                  (void);
-      void SendDynSignal               (void);
-      void ReceiveSignal               (void);
-      void ReceiveDynSignal            (void);
-      void SendSignalGroup             (void);
-      void ReceiveSignalGroup          (void);
-      void SendSignalGroupArray        (void);
-      void ReceiveSignalGroupArray     (void);
-      void InvalidateSignal            (void);
-      void InvalidateSignalGroup       (void);
-      void TriggerIpduSend             (void);
-      void TriggerIpduSendWithMetaData (void);
-      void SwitchIpduTxMode            (void);
-      void CbTriggerTransmit           (void);
-      void CbRxIndication              (void);
-      void CbTpRxIndication            (void);
-      void CbTxConfirmation            (void);
-      void CbTpTxConfirmation          (void);
-      void CbStartOfReception          (void);
-      void CbCopyRxData                (void);
-      void CbCopyTxData                (void);
-      void MainFunctionRx              (void);
-      void MainFunctionTx              (void);
-      void MainFunctionRouteSignals    (void);
-      void CbTxAck                     (void);
-      void CbTxErr                     (void);
-      void CbTxTOut                    (void);
-      void CbRxAck                     (void);
-      void CbRxTOut                    (void);
-      void CbRxInv                     (void);
-      void CbCounterErr                (void);
-      void CallOutRxIpdu               (void);
-      void CallOutTxIpdu               (void);
+      FUNC(void, COM_CODE) InitFunction                (void);
+      FUNC(void, COM_CODE) DeInitFunction              (void);
+      FUNC(void, COM_CODE) IpduGroupStart              (void);
+      FUNC(void, COM_CODE) IpduGroupStop               (void);
+      FUNC(void, COM_CODE) EnableReceptionDM           (void);
+      FUNC(void, COM_CODE) DisableReceptionDM          (void);
+      FUNC(void, COM_CODE) GetStatus                   (void);
+      FUNC(void, COM_CODE) GetVersionInfo              (void);
+      FUNC(void, COM_CODE) SendSignal                  (void);
+      FUNC(void, COM_CODE) SendDynSignal               (void);
+      FUNC(void, COM_CODE) ReceiveSignal               (void);
+      FUNC(void, COM_CODE) ReceiveDynSignal            (void);
+      FUNC(void, COM_CODE) SendSignalGroup             (void);
+      FUNC(void, COM_CODE) ReceiveSignalGroup          (void);
+      FUNC(void, COM_CODE) SendSignalGroupArray        (void);
+      FUNC(void, COM_CODE) ReceiveSignalGroupArray     (void);
+      FUNC(void, COM_CODE) InvalidateSignal            (void);
+      FUNC(void, COM_CODE) InvalidateSignalGroup       (void);
+      FUNC(void, COM_CODE) TriggerIpduSend             (void);
+      FUNC(void, COM_CODE) TriggerIpduSendWithMetaData (void);
+      FUNC(void, COM_CODE) SwitchIpduTxMode            (void);
+      FUNC(void, COM_CODE) CbTriggerTransmit           (void);
+      FUNC(void, COM_CODE) CbRxIndication              (void);
+      FUNC(void, COM_CODE) CbTpRxIndication            (void);
+      FUNC(void, COM_CODE) CbTxConfirmation            (void);
+      FUNC(void, COM_CODE) CbTpTxConfirmation          (void);
+      FUNC(void, COM_CODE) CbStartOfReception          (void);
+      FUNC(void, COM_CODE) CbCopyRxData                (void);
+      FUNC(void, COM_CODE) CbCopyTxData                (void);
+      FUNC(void, COM_CODE) MainFunctionRx              (void);
+      FUNC(void, COM_CODE) MainFunctionTx              (void);
+      FUNC(void, COM_CODE) MainFunctionRouteSignals    (void);
+      FUNC(void, COM_CODE) CbTxAck                     (void);
+      FUNC(void, COM_CODE) CbTxErr                     (void);
+      FUNC(void, COM_CODE) CbTxTOut                    (void);
+      FUNC(void, COM_CODE) CbRxAck                     (void);
+      FUNC(void, COM_CODE) CbRxTOut                    (void);
+      FUNC(void, COM_CODE) CbRxInv                     (void);
+      FUNC(void, COM_CODE) CbCounterErr                (void);
+      FUNC(void, COM_CODE) CallOutRxIpdu               (void);
+      FUNC(void, COM_CODE) CallOutTxIpdu               (void);
 };
 
 extern class_Com Com;

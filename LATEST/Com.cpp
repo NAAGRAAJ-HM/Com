@@ -2,126 +2,126 @@
 
 class_Com Com;
 
-void class_Com::InitFunction(void){
+FUNC(void, COM_CODE) class_Com::InitFunction(void){
 }
 
-void class_Com::DeInitFunction(void){
+FUNC(void, COM_CODE) class_Com::DeInitFunction(void){
 }
 
-void class_Com::IpduGroupStart(void){
+FUNC(void, COM_CODE) class_Com::IpduGroupStart(void){
 }
 
-void class_Com::IpduGroupStop(void){
+FUNC(void, COM_CODE) class_Com::IpduGroupStop(void){
 }
 
-void class_Com::EnableReceptionDM(void){
+FUNC(void, COM_CODE) class_Com::EnableReceptionDM(void){
 }
 
-void class_Com::DisableReceptionDM(void){
+FUNC(void, COM_CODE) class_Com::DisableReceptionDM(void){
 }
 
-void class_Com::GetStatus(void){
+FUNC(void, COM_CODE) class_Com::GetStatus(void){
 }
 
-void class_Com::GetVersionInfo(void){
+FUNC(void, COM_CODE) class_Com::GetVersionInfo(void){
 }
 
-void class_Com::SendSignal(void){
+FUNC(void, COM_CODE) class_Com::SendSignal(void){
 }
 
-void class_Com::SendDynSignal(void){
+FUNC(void, COM_CODE) class_Com::SendDynSignal(void){
 }
 
-void class_Com::ReceiveSignal(void){
+FUNC(void, COM_CODE) class_Com::ReceiveSignal(void){
 }
 
-void class_Com::ReceiveDynSignal(void){
+FUNC(void, COM_CODE) class_Com::ReceiveDynSignal(void){
 }
 
-void class_Com::SendSignalGroup(void){
+FUNC(void, COM_CODE) class_Com::SendSignalGroup(void){
 }
 
-void class_Com::ReceiveSignalGroup(void){
+FUNC(void, COM_CODE) class_Com::ReceiveSignalGroup(void){
 }
 
-void class_Com::SendSignalGroupArray(void){
+FUNC(void, COM_CODE) class_Com::SendSignalGroupArray(void){
 }
 
-void class_Com::ReceiveSignalGroupArray(void){
+FUNC(void, COM_CODE) class_Com::ReceiveSignalGroupArray(void){
 }
 
-void class_Com::InvalidateSignal(void){
+FUNC(void, COM_CODE) class_Com::InvalidateSignal(void){
 }
 
-void class_Com::InvalidateSignalGroup(void){
+FUNC(void, COM_CODE) class_Com::InvalidateSignalGroup(void){
 }
 
-void class_Com::TriggerIpduSend(void){
+FUNC(void, COM_CODE) class_Com::TriggerIpduSend(void){
 }
 
-void class_Com::TriggerIpduSendWithMetaData(void){
+FUNC(void, COM_CODE) class_Com::TriggerIpduSendWithMetaData(void){
 }
 
-void class_Com::SwitchIpduTxMode(void){
+FUNC(void, COM_CODE) class_Com::SwitchIpduTxMode(void){
 }
 
-void class_Com::CbTriggerTransmit(void){
+FUNC(void, COM_CODE) class_Com::CbTriggerTransmit(void){
 }
 
-void class_Com::CbRxIndication(void){
+FUNC(void, COM_CODE) class_Com::CbRxIndication(void){
 }
 
-void class_Com::CbTpRxIndication(void){
+FUNC(void, COM_CODE) class_Com::CbTpRxIndication(void){
 }
 
-void class_Com::CbTxConfirmation(void){
+FUNC(void, COM_CODE) class_Com::CbTxConfirmation(void){
 }
 
-void class_Com::CbTpTxConfirmation(void){
+FUNC(void, COM_CODE) class_Com::CbTpTxConfirmation(void){
 }
 
-void class_Com::CbStartOfReception(void){
+FUNC(void, COM_CODE) class_Com::CbStartOfReception(void){
 }
 
-void class_Com::CbCopyRxData(void){
+FUNC(void, COM_CODE) class_Com::CbCopyRxData(void){
 }
 
-void class_Com::CbCopyTxData(void){
+FUNC(void, COM_CODE) class_Com::CbCopyTxData(void){
 }
 
-void class_Com::MainFunctionRx(void){
+FUNC(void, COM_CODE) class_Com::MainFunctionRx(void){
 }
 
-void class_Com::MainFunctionTx(void){
+FUNC(void, COM_CODE) class_Com::MainFunctionTx(void){
 }
 
-void class_Com::MainFunctionRouteSignals(void){
+FUNC(void, COM_CODE) class_Com::MainFunctionRouteSignals(void){
 }
 
-void class_Com::CbTxAck(void){
+FUNC(void, COM_CODE) class_Com::CbTxAck(void){
 }
 
-void class_Com::CbTxErr(void){
+FUNC(void, COM_CODE) class_Com::CbTxErr(void){
 }
 
-void class_Com::CbTxTOut(void){
+FUNC(void, COM_CODE) class_Com::CbTxTOut(void){
 }
 
-void class_Com::CbRxAck(void){
+FUNC(void, COM_CODE) class_Com::CbRxAck(void){
 }
 
-void class_Com::CbRxTOut(void){
+FUNC(void, COM_CODE) class_Com::CbRxTOut(void){
 }
 
-void class_Com::CbRxInv(void){
+FUNC(void, COM_CODE) class_Com::CbRxInv(void){
 }
 
-void class_Com::CbCounterErr(void){
+FUNC(void, COM_CODE) class_Com::CbCounterErr(void){
 }
 
-void class_Com::CallOutRxIpdu(void){
+FUNC(void, COM_CODE) class_Com::CallOutRxIpdu(void){
 }
 
-void class_Com::CallOutTxIpdu(void){
+FUNC(void, COM_CODE) class_Com::CallOutTxIpdu(void){
 }
 
