@@ -8,18 +8,22 @@
 /*****************************************************/
 #include "Com.h"
 
+#include "Com_EcuM.h"
+
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
+class_Com_EcuM Com_EcuM;
+class_EcuM_Client *EcuM_Client_ptr_Com = &Com_EcuM;
 class_Com Com;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, COM_CODE) class_Com::InitFunction(void){
+FUNC(void, COM_CODE) class_Com_EcuM::InitFunction(void){
 }
 
-FUNC(void, COM_CODE) class_Com::DeInitFunction(void){
+FUNC(void, COM_CODE) class_Com_EcuM::DeInitFunction(void){
 }
 
 FUNC(void, COM_CODE) class_Com::IpduGroupStart(void){

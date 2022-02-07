@@ -18,8 +18,6 @@ class class_Com{
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-      FUNC(void, COM_CODE) InitFunction                (void);
-      FUNC(void, COM_CODE) DeInitFunction              (void);
       FUNC(void, COM_CODE) IpduGroupStart              (void);
       FUNC(void, COM_CODE) IpduGroupStop               (void);
       FUNC(void, COM_CODE) EnableReceptionDM           (void);
