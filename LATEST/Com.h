@@ -45,9 +45,6 @@ class class_Com{
       FUNC(void, COM_CODE) CbStartOfReception          (void);
       FUNC(void, COM_CODE) CbCopyRxData                (void);
       FUNC(void, COM_CODE) CbCopyTxData                (void);
-      FUNC(void, COM_CODE) MainFunctionRx              (void);
-      FUNC(void, COM_CODE) MainFunctionTx              (void);
-      FUNC(void, COM_CODE) MainFunctionRouteSignals    (void);
       FUNC(void, COM_CODE) CbTxAck                     (void);
       FUNC(void, COM_CODE) CbTxErr                     (void);
       FUNC(void, COM_CODE) CbTxTOut                    (void);
