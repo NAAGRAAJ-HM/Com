@@ -9,39 +9,40 @@
 #include "Com.h"
 
 #include "Com_EcuM.h"
-#include "ComRx_SchM.h"
-#include "ComTx_SchM.h"
-#include "ComRouteSignals_SchM.h"
+#include "Com_SchM.h"
 
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-class_Com_EcuM Com_EcuM;
-class_EcuM_Client *EcuM_Client_ptr_Com = &Com_EcuM;
-class_ComRx_SchM ComRx_SchM;
-class_SchM_Client *SchM_Client_ptr_ComRx = &ComRx_SchM;
-class_ComTx_SchM ComTx_SchM;
-class_SchM_Client *SchM_Client_ptr_ComTx = &ComTx_SchM;
-class_ComRouteSignals_SchM ComRouteSignals_SchM;
-class_SchM_Client *SchM_Client_ptr_ComRouteSignals = &ComRouteSignals_SchM;
+interface_Com_EcuM_Init Com_EcuM_Init;
+interface_Com_EcuM_DeInit Com_EcuM_DeInit;
+interface_ComRouteSignals_SchM_Main ComRouteSignals_SchM_Main;
+interface_ComRx_SchM_Main ComRx_SchM_Main;
+interface_ComTx_SchM_Main ComTx_SchM_Main;
 class_Com Com;
+
+interface_EcuM_Init_Client *EcuM_Init_Client_ptr_Com = &Com_EcuM_Init;
+interface_EcuM_DeInit_Client *EcuM_DeInit_Client_ptr_Com = &Com_EcuM_DeInit;
+interface_SchM_Main_Client *SchM_Main_Client_ptr_ComRx = &ComRx_SchM_Main;
+interface_SchM_Main_Client *SchM_Main_Client_ptr_ComTx = &ComTx_SchM_Main;
+interface_SchM_Main_Client *SchM_Main_Client_ptr_ComRouteSignals = &ComRouteSignals_SchM_Main;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
 /*****************************************************/
-FUNC(void, COM_CODE) class_Com_EcuM::InitFunction(void){
+FUNC(void, COM_CODE) interface_Com_EcuM_Init::InitFunction(void){
 }
 
-FUNC(void, COM_CODE) class_Com_EcuM::DeInitFunction(void){
+FUNC(void, COM_CODE) interface_Com_EcuM_DeInit::DeInitFunction(void){
 }
 
-FUNC(void, COM_CODE) class_ComRx_SchM::MainFunction(void){
+FUNC(void, COM_CODE) interface_ComRouteSignals_SchM_Main::MainFunction(void){
 }
 
-FUNC(void, COM_CODE) class_ComTx_SchM::MainFunction(void){
+FUNC(void, COM_CODE) interface_ComRx_SchM_Main::MainFunction(void){
 }
 
-FUNC(void, COM_CODE) class_ComRouteSignals_SchM::MainFunction(void){
+FUNC(void, COM_CODE) interface_ComTx_SchM_Main::MainFunction(void){
 }
 
 FUNC(void, COM_CODE) class_Com::IpduGroupStart(void){
