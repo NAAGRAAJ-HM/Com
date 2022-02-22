@@ -7,7 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-
+#include "Com_EcuM.h"
+#include "Com_SchM.h"
 #include "Com_Unused.h"
 
 /*****************************************************/
@@ -21,11 +22,17 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class module_Com : public class_module{
+class module_Com:
+      public abstract_module
+   ,  public interface_Com_EcuM
+   ,  public interface_Com_SchM
+{
    public:
       FUNC(void, COM_CODE) InitFunction   (void);
       FUNC(void, COM_CODE) DeInitFunction (void);
       FUNC(void, COM_CODE) MainFunction   (void);
+      FUNC(void, COM_CODE) MainFunctionRx (void);
+      FUNC(void, COM_CODE) MainFunctionTx (void);
 };
 
 /*****************************************************/
@@ -41,8 +48,8 @@ class module_Com : public class_module{
 /*****************************************************/
 module_Com Com;
 
-interface_EcuM_Client *EcuM_Client_ptr_Com = &Com;
-interface_SchM_Client *SchM_Client_ptr_Com = &Com;
+interface_Com_EcuM *EcuM_Client_ptr_Com = &Com;
+interface_Com_SchM *SchM_Client_ptr_Com = &Com;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -54,7 +61,12 @@ FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
 }
 
 FUNC(void, COM_CODE) module_Com::MainFunction(void){
-//TBD MainFunctionRx, MainFunctionTx
+}
+
+FUNC(void, COM_CODE) module_Com::MainFunctionRx(void){
+}
+
+FUNC(void, COM_CODE) module_Com::MainFunctionTx(void){
 }
 
 FUNC(void, COM_CODE) class_Com_Unused::IpduGroupStart(void){

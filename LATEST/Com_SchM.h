@@ -1,6 +1,6 @@
 #pragma once
 /*****************************************************/
-/* File   : Com_SchM.h                             */
+/* File   : Com_SchM.h                               */
 /* Author : Naagraaj HM                              */
 /*****************************************************/
 
@@ -22,19 +22,11 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class class_ComRouteSignals_SchM : public class_SchM_Client{
+class interface_Com_SchM : public interface_SchM_Client{
    public:
-      FUNC(void, COM_CODE) MainFunction(void);
-};
-
-class class_ComRx_SchM : public class_SchM_Client{
-   public:
-      FUNC(void, COM_CODE) MainFunction(void);
-};
-
-class class_ComTx_SchM : public class_SchM_Client{
-   public:
-      FUNC(void, COM_CODE) MainFunction(void);
+      FUNC(void, COM_CODE) MainFunction   (void);
+      FUNC(void, COM_CODE) MainFunctionRx (void);
+      FUNC(void, COM_CODE) MainFunctionTx (void);
 };
 
 /*****************************************************/
@@ -48,9 +40,7 @@ class class_ComTx_SchM : public class_SchM_Client{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern class_SchM_Client *SchM_Client_ptr_ComRouteSignals;
-extern class_SchM_Client *SchM_Client_ptr_ComRx;
-extern class_SchM_Client *SchM_Client_ptr_ComTx;
+extern interface_Com_SchM *SchM_Client_ptr_Com;
 
 /*****************************************************/
 /* FUNCTIONS                                         */
