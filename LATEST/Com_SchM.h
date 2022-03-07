@@ -9,8 +9,6 @@
 /*****************************************************/
 #include "Compiler_Cfg_Com.h"
 
-#include "SchM_Client.h"
-
 /*****************************************************/
 /* #DEFINES                                          */
 /*****************************************************/
@@ -22,9 +20,11 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class interface_Com_SchM : public interface_SchM_Client{
+class interface_Com_SchM{
    public:
-      FUNC(void, COM_CODE) MainFunction   (void);
+/*****************************************************/
+/* FUNCTIONS                                         */
+/*****************************************************/
       FUNC(void, COM_CODE) MainFunctionRx (void);
       FUNC(void, COM_CODE) MainFunctionTx (void);
 };
@@ -41,10 +41,6 @@ class interface_Com_SchM : public interface_SchM_Client{
 /* OBJECTS                                           */
 /*****************************************************/
 extern interface_Com_SchM *SchM_Client_ptr_Com;
-
-/*****************************************************/
-/* FUNCTIONS                                         */
-/*****************************************************/
 
 /*****************************************************/
 /* EOF                                               */
