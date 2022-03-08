@@ -40,7 +40,7 @@ class interface_Com_SchM{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern interface_Com_SchM *SchM_Client_ptr_Com;
+extern infSchMClient *gptrinfSchMClient_Com;
 
 /*****************************************************/
 /* EOF                                               */
