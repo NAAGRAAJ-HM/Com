@@ -20,7 +20,7 @@
 /*****************************************************/
 /* TYPEDEFS                                          */
 /*****************************************************/
-class interface_Com_SchM{
+class infCom_SchM{
    public:
 /*****************************************************/
 /* FUNCTIONS                                         */
@@ -40,7 +40,8 @@ class interface_Com_SchM{
 /*****************************************************/
 /* OBJECTS                                           */
 /*****************************************************/
-extern infSchMClient *gptrinfSchMClient_Com;
+extern infSchMClient* gptrinfSchMClient_Com;
+extern infCom_SchM*   gptrinfCom_SchM;
 
 /*****************************************************/
 /* EOF                                               */
