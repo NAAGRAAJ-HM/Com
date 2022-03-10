@@ -7,8 +7,8 @@
 /* #INCLUDES                                         */
 /*****************************************************/
 #include "module.h"
-#include "Com_EcuM.h"
-#include "Com_SchM.h"
+#include "infCom_EcuM.h"
+#include "infCom_SchM.h"
 #include "Com_Unused.h"
 
 /*****************************************************/
@@ -28,6 +28,7 @@ class module_Com:
    public:
       FUNC(void, COM_CODE) InitFunction   (void);
       FUNC(void, COM_CODE) DeInitFunction (void);
+      FUNC(void, COM_CODE) GetVersionInfo (void);
       FUNC(void, COM_CODE) MainFunction   (void);
       FUNC(void, COM_CODE) MainFunctionRx (void);
       FUNC(void, COM_CODE) MainFunctionTx (void);
@@ -46,6 +47,7 @@ class module_Com:
 /*****************************************************/
 module_Com     Com;
 infEcuMClient* gptrinfEcuMClient_Com = &Com;
+infDcmClient*  gptrinfDcmClient_Com  = &Com;
 infSchMClient* gptrinfSchMClient_Com = &Com;
 
 /*****************************************************/
@@ -55,6 +57,9 @@ FUNC(void, COM_CODE) module_Com::InitFunction(void){
 }
 
 FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
+}
+
+FUNC(void, COM_CODE) module_Com::GetVersionInfo(void){
 }
 
 FUNC(void, COM_CODE) module_Com::MainFunction(void){
