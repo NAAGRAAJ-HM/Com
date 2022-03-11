@@ -8,8 +8,8 @@
 /*****************************************************/
 #include "module.h"
 #include "infCom_EcuM.h"
+#include "infCom_Dcm.h"
 #include "infCom_SchM.h"
-#include "Com_Unused.h"
 
 /*****************************************************/
 /* #DEFINES                                          */
@@ -71,6 +71,8 @@ FUNC(void, COM_CODE) module_Com::MainFunctionRx(void){
 FUNC(void, COM_CODE) module_Com::MainFunctionTx(void){
 }
 
+#include "Com_Unused.h"
+
 FUNC(void, COM_CODE) class_Com_Unused::IpduGroupStart(void){
 }
 
@@ -84,9 +86,6 @@ FUNC(void, COM_CODE) class_Com_Unused::DisableReceptionDM(void){
 }
 
 FUNC(void, COM_CODE) class_Com_Unused::GetStatus(void){
-}
-
-FUNC(void, COM_CODE) class_Com_Unused::GetVersionInfo(void){
 }
 
 FUNC(void, COM_CODE) class_Com_Unused::SendSignal(void){
