@@ -1,6 +1,6 @@
 #pragma once
 /******************************************************************************/
-/* File   : infCom_Version.h                                                  */
+/* File   : ComStack_Types.h                                                  */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
@@ -11,19 +11,10 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define COM_AR_RELEASE_MAJOR_VERSION                                           4
-#define COM_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(COM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
-   #error "Incompatible COM_AR_RELEASE_MAJOR_VERSION!"
-#endif
-
-#if(COM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
-   #error "Incompatible COM_AR_RELEASE_MINOR_VERSION!"
-#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
