@@ -7,7 +7,7 @@
 /* #INCLUDES                                                                  */
 /******************************************************************************/
 #include "module.h"
-#include "infCom_Version.h"
+#include "Com_Cfg.h"
 #include "infCom_EcuM.h"
 #include "infCom_Dcm.h"
 #include "infCom_SchM.h"
@@ -15,10 +15,19 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
+#define COM_AR_RELEASE_MAJOR_VERSION                                           4
+#define COM_AR_RELEASE_MINOR_VERSION                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
+#if(COM_AR_RELEASE_MAJOR_VERSION != STD_AR_RELEASE_MAJOR_VERSION)
+   #error "Incompatible COM_AR_RELEASE_MAJOR_VERSION!"
+#endif
+
+#if(COM_AR_RELEASE_MINOR_VERSION != STD_AR_RELEASE_MINOR_VERSION)
+   #error "Incompatible COM_AR_RELEASE_MINOR_VERSION!"
+#endif
 
 /******************************************************************************/
 /* TYPEDEFS                                                                   */
@@ -63,6 +72,11 @@ FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
 }
 
 FUNC(void, COM_CODE) module_Com::GetVersionInfo(void){
+#if(STD_ON == Com_DevErrorDetect)
+//TBD: API parameter check
+   Det_ReportError(
+   );
+#endif
 }
 
 FUNC(void, COM_CODE) module_Com::MainFunction(void){
