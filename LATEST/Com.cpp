@@ -42,6 +42,16 @@ class module_Com:
       FUNC(void, COM_CODE) MainFunction   (void);
       FUNC(void, COM_CODE) MainFunctionRx (void);
       FUNC(void, COM_CODE) MainFunctionTx (void);
+
+   private:
+      CONST(Std_TypeVersionInfo, COM_CONST) VersionInfo = {
+            0x0000
+         ,  0xFFFF
+         ,  0x01
+         ,  '0'
+         ,  '1'
+         ,  '0'
+      };
 };
 
 /******************************************************************************/
