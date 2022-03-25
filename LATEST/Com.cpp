@@ -6,11 +6,11 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.h"
-#include "CfgCom.h"
-#include "infCom_EcuM.h"
-#include "infCom_Dcm.h"
-#include "infCom_SchM.h"
+#include "module.hpp"
+#include "CfgCom.hpp"
+#include "infCom_EcuM.hpp"
+#include "infCom_Dcm.hpp"
+#include "infCom_SchM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -98,7 +98,7 @@ FUNC(void, COM_CODE) module_Com::MainFunctionRx(void){
 FUNC(void, COM_CODE) module_Com::MainFunctionTx(void){
 }
 
-#include "Com_Unused.h"
+#include "Com_Unused.hpp"
 
 FUNC(void, COM_CODE) class_Com_Unused::IpduGroupStart(void){
 }
