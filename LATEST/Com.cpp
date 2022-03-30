@@ -6,7 +6,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "module.hpp"
+#include "Module.hpp"
 #include "infCom_EcuM.hpp"
 #include "infCom_Dcm.hpp"
 #include "infCom_SchM.hpp"
@@ -37,6 +37,9 @@ class module_Com:
    public:
       module_Com(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
+      FUNC(void, _CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      );
       FUNC(void, COM_CODE) InitFunction   (void);
       FUNC(void, COM_CODE) DeInitFunction (void);
       FUNC(void, COM_CODE) MainFunction   (void);
@@ -76,7 +79,19 @@ VAR(module_Com, COM_VAR) Com(
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, COM_CODE) module_Com::InitFunction(void){
+FUNC(void, COM_CODE) module_Com::InitFunction(
+   CONSTP2CONST(CfgCom_Type, CFGCOM_CONFIG_DATA, CFGCOM_APPL_CONST) lptrCfgCom
+){
+   if(NULL_PTR == lptrCfgCom){
+#if(STD_ON == Com_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+// check lptrCfgCom for memory faults
+// use PBcfg_Com as back-up configuration
+   }
    Com.IsInitDone = E_OK;
 }
 
