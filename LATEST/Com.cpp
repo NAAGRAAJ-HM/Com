@@ -37,10 +37,9 @@ class module_Com:
    public:
       module_Com(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
       }
-      FUNC(void, _CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, _CONFIG_DATA, _APPL_CONST) lptrCfgModule
+      FUNC(void, COM_CODE) InitFunction(
+         CONSTP2CONST(CfgModule_TypeAbstract, COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, COM_CODE) InitFunction   (void);
       FUNC(void, COM_CODE) DeInitFunction (void);
       FUNC(void, COM_CODE) MainFunction   (void);
 
@@ -80,23 +79,39 @@ VAR(module_Com, COM_VAR) Com(
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
 FUNC(void, COM_CODE) module_Com::InitFunction(
-   CONSTP2CONST(CfgCom_Type, CFGCOM_CONFIG_DATA, CFGCOM_APPL_CONST) lptrCfgCom
+   CONSTP2CONST(CfgModule_TypeAbstract, COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
 ){
-   if(NULL_PTR == lptrCfgCom){
+   if(E_OK == IsInitDone){
 #if(STD_ON == Com_DevErrorDetect)
       Det_ReportError(
       );
 #endif
    }
    else{
-// check lptrCfgCom for memory faults
+      if(NULL_PTR == lptrCfgModule){
+#if(STD_ON == Com_DevErrorDetect)
+         Det_ReportError(
+         );
+#endif
+      }
+      else{
+// check lptrCfgModule for memory faults
 // use PBcfg_Com as back-up configuration
+      }
+      IsInitDone = E_OK;
    }
-   Com.IsInitDone = E_OK;
 }
 
 FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
-   Com.IsInitDone = E_NOT_OK;
+   if(E_OK != IsInitDone){
+#if(STD_ON == Com_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+      IsInitDone = E_NOT_OK;
+   }
 }
 
 FUNC(void, COM_CODE) module_Com::MainFunction(void){
