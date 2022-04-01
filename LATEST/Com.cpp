@@ -81,6 +81,7 @@ VAR(module_Com, COM_VAR) Com(
 FUNC(void, COM_CODE) module_Com::InitFunction(
    CONSTP2CONST(CfgModule_TypeAbstract, COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
 ){
+#if(STD_ON == Com_InitCheck)
    if(E_OK == IsInitDone){
 #if(STD_ON == Com_DevErrorDetect)
       Det_ReportError(
@@ -88,6 +89,7 @@ FUNC(void, COM_CODE) module_Com::InitFunction(
 #endif
    }
    else{
+#endif
       if(NULL_PTR == lptrCfgModule){
 #if(STD_ON == Com_DevErrorDetect)
          Det_ReportError(
@@ -99,10 +101,13 @@ FUNC(void, COM_CODE) module_Com::InitFunction(
 // use PBcfg_Com as back-up configuration
       }
       IsInitDone = E_OK;
+#if(STD_ON == Com_InitCheck)
    }
+#endif
 }
 
 FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
+#if(STD_ON == Com_InitCheck)
    if(E_OK != IsInitDone){
 #if(STD_ON == Com_DevErrorDetect)
       Det_ReportError(
@@ -110,11 +115,26 @@ FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
 #endif
    }
    else{
+#endif
       IsInitDone = E_NOT_OK;
+#if(STD_ON == Com_InitCheck)
    }
+#endif
 }
 
 FUNC(void, COM_CODE) module_Com::MainFunction(void){
+#if(STD_ON == Com_InitCheck)
+   if(E_OK != IsInitDone){
+#if(STD_ON == Com_DevErrorDetect)
+      Det_ReportError(
+      );
+#endif
+   }
+   else{
+#endif
+#if(STD_ON == Com_InitCheck)
+   }
+#endif
 }
 
 FUNC(void, COM_CODE) module_Com::MainFunctionRx(void){
