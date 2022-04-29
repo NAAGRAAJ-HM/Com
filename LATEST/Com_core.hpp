@@ -12,7 +12,7 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define COM_COREFUNCTIONALITIES                                                \
+#define COM_CORE_FUNCTIONALITIES                                               \
               FUNC(void, COM_CODE) IpduGroupStart              (void);         \
               FUNC(void, COM_CODE) IpduGroupStop               (void);         \
               FUNC(void, COM_CODE) EnableReceptionDM           (void);         \
@@ -49,7 +49,7 @@
               FUNC(void, COM_CODE) CallOutRxIpdu               (void);         \
               FUNC(void, COM_CODE) CallOutTxIpdu               (void);         \
 
-#define COM_COREFUNCTIONALITIES_VIRTUAL                                        \
+#define COM_CORE_FUNCTIONALITIES_VIRTUAL                                       \
       virtual FUNC(void, COM_CODE) IpduGroupStart              (void) = 0;     \
       virtual FUNC(void, COM_CODE) IpduGroupStop               (void) = 0;     \
       virtual FUNC(void, COM_CODE) EnableReceptionDM           (void) = 0;     \
@@ -95,7 +95,7 @@
 /******************************************************************************/
 class class_Com_Functionality{
    public:
-      COM_COREFUNCTIONALITIES_VIRTUAL
+      COM_CORE_FUNCTIONALITIES_VIRTUAL
 };
 
 /******************************************************************************/
