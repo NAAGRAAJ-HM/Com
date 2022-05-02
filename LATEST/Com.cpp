@@ -168,109 +168,109 @@ FUNC(void, COM_CODE) module_Com::MainFunctionRx(void){
 FUNC(void, COM_CODE) module_Com::MainFunctionTx(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::IpduGroupStart(void){
+FUNC(void, COM_CODE) module_Com::IpduGroupStart(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::IpduGroupStop(void){
+FUNC(void, COM_CODE) module_Com::IpduGroupStop(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::EnableReceptionDM(void){
+FUNC(void, COM_CODE) module_Com::EnableReceptionDM(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::DisableReceptionDM(void){
+FUNC(void, COM_CODE) module_Com::DisableReceptionDM(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::GetStatus(void){
+FUNC(void, COM_CODE) module_Com::GetStatus(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::SendSignal(void){
+FUNC(void, COM_CODE) module_Com::SendSignal(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::SendDynSignal(void){
+FUNC(void, COM_CODE) module_Com::SendDynSignal(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::ReceiveSignal(void){
+FUNC(void, COM_CODE) module_Com::ReceiveSignal(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::ReceiveDynSignal(void){
+FUNC(void, COM_CODE) module_Com::ReceiveDynSignal(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::SendSignalGroup(void){
+FUNC(void, COM_CODE) module_Com::SendSignalGroup(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::ReceiveSignalGroup(void){
+FUNC(void, COM_CODE) module_Com::ReceiveSignalGroup(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::SendSignalGroupArray(void){
+FUNC(void, COM_CODE) module_Com::SendSignalGroupArray(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::ReceiveSignalGroupArray(void){
+FUNC(void, COM_CODE) module_Com::ReceiveSignalGroupArray(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::InvalidateSignal(void){
+FUNC(void, COM_CODE) module_Com::InvalidateSignal(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::InvalidateSignalGroup(void){
+FUNC(void, COM_CODE) module_Com::InvalidateSignalGroup(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::TriggerIpduSend(void){
+FUNC(void, COM_CODE) module_Com::TriggerIpduSend(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::TriggerIpduSendWithMetaData(void){
+FUNC(void, COM_CODE) module_Com::TriggerIpduSendWithMetaData(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::SwitchIpduTxMode(void){
+FUNC(void, COM_CODE) module_Com::SwitchIpduTxMode(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTriggerTransmit(void){
+FUNC(void, COM_CODE) module_Com::CbTriggerTransmit(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbRxIndication(void){
+FUNC(void, COM_CODE) module_Com::CbRxIndication(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTpRxIndication(void){
+FUNC(void, COM_CODE) module_Com::CbTpRxIndication(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTxConfirmation(void){
+FUNC(void, COM_CODE) module_Com::CbTxConfirmation(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTpTxConfirmation(void){
+FUNC(void, COM_CODE) module_Com::CbTpTxConfirmation(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbStartOfReception(void){
+FUNC(void, COM_CODE) module_Com::CbStartOfReception(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbCopyRxData(void){
+FUNC(void, COM_CODE) module_Com::CbCopyRxData(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbCopyTxData(void){
+FUNC(void, COM_CODE) module_Com::CbCopyTxData(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTxAck(void){
+FUNC(void, COM_CODE) module_Com::CbTxAck(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTxErr(void){
+FUNC(void, COM_CODE) module_Com::CbTxErr(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbTxTOut(void){
+FUNC(void, COM_CODE) module_Com::CbTxTOut(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbRxAck(void){
+FUNC(void, COM_CODE) module_Com::CbRxAck(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbRxTOut(void){
+FUNC(void, COM_CODE) module_Com::CbRxTOut(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbRxInv(void){
+FUNC(void, COM_CODE) module_Com::CbRxInv(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CbCounterErr(void){
+FUNC(void, COM_CODE) module_Com::CbCounterErr(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CallOutRxIpdu(void){
+FUNC(void, COM_CODE) module_Com::CallOutRxIpdu(void){
 }
 
-FUNC(void, COM_CODE) class_Com_Functionality::CallOutTxIpdu(void){
+FUNC(void, COM_CODE) module_Com::CallOutTxIpdu(void){
 }
 
 /******************************************************************************/
