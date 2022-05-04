@@ -116,7 +116,7 @@ FUNC(void, COM_CODE) module_Com::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  COM_E_UNINIT
       );
 #endif
    }
@@ -136,7 +136,7 @@ FUNC(void, COM_CODE) module_Com::DeInitFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  COM_E_UNINIT
       );
 #endif
    }
@@ -155,7 +155,7 @@ FUNC(void, COM_CODE) module_Com::MainFunction(void){
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  0 //TBD: IdError
+         ,  COM_E_UNINIT
       );
 #endif
    }
