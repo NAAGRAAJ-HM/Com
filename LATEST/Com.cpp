@@ -32,7 +32,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_Com:
-   INTERFACES_EXPORTED_COM
+      INTERFACES_EXPORTED_COM
       public abstract_module
    ,  public class_Com_Functionality
 {
