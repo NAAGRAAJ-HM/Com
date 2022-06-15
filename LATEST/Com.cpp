@@ -43,6 +43,7 @@ class module_Com:
 /******************************************************************************/
             Std_TypeReturn          IsInitDone{E_NOT_OK};
       const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
+            infPduRClient_Up        infPduRClient_Com;
 
    public:
       module_Com(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
