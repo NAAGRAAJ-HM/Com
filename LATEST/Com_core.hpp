@@ -32,9 +32,9 @@
               FUNC(void, COM_CODE) TriggerIpduSendWithMetaData (void);         \
               FUNC(void, COM_CODE) SwitchIpduTxMode            (void);         \
               FUNC(void, COM_CODE) CbTriggerTransmit           (void);         \
-              FUNC(void, COM_CODE) CbRxIndication              (void);         \
+              FUNC(void, COM_CODE) RxIndication                (void);         \
               FUNC(void, COM_CODE) CbTpRxIndication            (void);         \
-              FUNC(void, COM_CODE) CbTxConfirmation            (void);         \
+              FUNC(void, COM_CODE) TxConfirmation              (void);         \
               FUNC(void, COM_CODE) CbTpTxConfirmation          (void);         \
               FUNC(void, COM_CODE) CbStartOfReception          (void);         \
               FUNC(void, COM_CODE) CbCopyRxData                (void);         \
@@ -69,9 +69,9 @@
       virtual FUNC(void, COM_CODE) TriggerIpduSendWithMetaData (void) = 0;     \
       virtual FUNC(void, COM_CODE) SwitchIpduTxMode            (void) = 0;     \
       virtual FUNC(void, COM_CODE) CbTriggerTransmit           (void) = 0;     \
-      virtual FUNC(void, COM_CODE) CbRxIndication              (void) = 0;     \
+      virtual FUNC(void, COM_CODE) RxIndication                (void) = 0;     \
       virtual FUNC(void, COM_CODE) CbTpRxIndication            (void) = 0;     \
-      virtual FUNC(void, COM_CODE) CbTxConfirmation            (void) = 0;     \
+      virtual FUNC(void, COM_CODE) TxConfirmation              (void) = 0;     \
       virtual FUNC(void, COM_CODE) CbTpTxConfirmation          (void) = 0;     \
       virtual FUNC(void, COM_CODE) CbStartOfReception          (void) = 0;     \
       virtual FUNC(void, COM_CODE) CbCopyRxData                (void) = 0;     \

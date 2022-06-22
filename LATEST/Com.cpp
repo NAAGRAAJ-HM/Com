@@ -242,13 +242,13 @@ FUNC(void, COM_CODE) module_Com::SwitchIpduTxMode(void){
 FUNC(void, COM_CODE) module_Com::CbTriggerTransmit(void){
 }
 
-FUNC(void, COM_CODE) module_Com::CbRxIndication(void){
+FUNC(void, COM_CODE) module_Com::RxIndication(void){
 }
 
 FUNC(void, COM_CODE) module_Com::CbTpRxIndication(void){
 }
 
-FUNC(void, COM_CODE) module_Com::CbTxConfirmation(void){
+FUNC(void, COM_CODE) module_Com::TxConfirmation(void){
 }
 
 FUNC(void, COM_CODE) module_Com::CbTpTxConfirmation(void){
