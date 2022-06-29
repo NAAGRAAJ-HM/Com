@@ -41,13 +41,9 @@ class module_Com:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-            Std_TypeReturn          IsInitDone{E_NOT_OK};
-      const CfgModule_TypeAbstract* lptrCfg{(CfgModule_TypeAbstract*)NULL_PTR};
             infPduRClient_Up        infPduRClient_Com;
 
    public:
-      module_Com(Std_TypeVersionInfo lVersionInfo) : abstract_module(lVersionInfo){
-      }
       FUNC(void, COM_CODE) InitFunction(
          CONSTP2CONST(CfgModule_TypeAbstract, COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
       );
@@ -75,18 +71,7 @@ CONSTP2VAR(infSchMClient, COM_VAR, COM_CONST) gptrinfSchMClient_Com = &Com;
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_Com, COM_VAR) Com(
-   {
-         COM_AR_RELEASE_VERSION_MAJOR
-      ,  COM_AR_RELEASE_VERSION_MINOR
-      ,  0x00
-      ,  0xFF
-      ,  0x01
-      ,  '0'
-      ,  '1'
-      ,  '0'
-   }
-);
+VAR(module_Com, COM_VAR) Com;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
