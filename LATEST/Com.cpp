@@ -86,12 +86,7 @@ FUNC(void, COM_CODE) module_Com::InitFunction(
    ){
 #endif
       if(NULL_PTR != lptrCfgModule){
-         if(STD_HIGH){
-            lptrCfg = lptrCfgModule;
-         }
-         else{
-            lptrCfg = &PBcfgCom;
-         }
+         lptrCfg = lptrCfgModule;
       }
       else{
 #if(STD_ON == Com_DevErrorDetect)
