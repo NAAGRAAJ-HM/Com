@@ -35,8 +35,6 @@
 /* CONSTS                                                                     */
 /******************************************************************************/
 CONSTP2VAR(infEcuMClient, COM_VAR, COM_CONST) gptrinfEcuMClient_Com = &Com;
-CONSTP2VAR(infDcmClient,  COM_VAR, COM_CONST) gptrinfDcmClient_Com  = &Com;
-CONSTP2VAR(infSchMClient, COM_VAR, COM_CONST) gptrinfSchMClient_Com = &Com;
 
 /******************************************************************************/
 /* PARAMS                                                                     */
