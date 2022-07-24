@@ -7,6 +7,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
+#include "ConstCom.hpp"
 #include "CfgCom.hpp"
 #include "Com_core.hpp"
 #include "infCom_Exp.hpp"
@@ -31,6 +32,7 @@ class module_Com:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
+      const ConstCom_Type* lptrConst = (ConstCom_Type*)NULL_PTR;
       infPduRClient_Up infPduRClient_Com;
 
    public:
@@ -38,7 +40,8 @@ class module_Com:
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
       FUNC(void, COM_CODE) InitFunction(
-         CONSTP2CONST(CfgModule_TypeAbstract, COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
+            CONSTP2CONST(ConstModule_TypeAbstract, COM_CONST,       COM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
       );
       FUNC(void, COM_CODE) DeInitFunction (void);
       FUNC(void, COM_CODE) MainFunction   (void);
