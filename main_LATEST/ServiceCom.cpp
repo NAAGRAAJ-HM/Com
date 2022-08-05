@@ -13,18 +13,18 @@
 /******************************************************************************/
 /* #DEFINES                                                                   */
 /******************************************************************************/
-#define COM_AR_RELEASE_VERSION_MAJOR                                           4
-#define COM_AR_RELEASE_VERSION_MINOR                                           3
+#define SERVICECOM_AR_RELEASE_VERSION_MAJOR                                           4
+#define SERVICECOM_AR_RELEASE_VERSION_MINOR                                           3
 
 /******************************************************************************/
 /* MACROS                                                                     */
 /******************************************************************************/
-#if(COM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
-   #error "Incompatible COM_AR_RELEASE_VERSION_MAJOR!"
+#if(SERVICECOM_AR_RELEASE_VERSION_MAJOR != STD_AR_RELEASE_VERSION_MAJOR)
+   #error "Incompatible SERVICECOM_AR_RELEASE_VERSION_MAJOR!"
 #endif
 
-#if(COM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
-   #error "Incompatible COM_AR_RELEASE_VERSION_MINOR!"
+#if(SERVICECOM_AR_RELEASE_VERSION_MINOR != STD_AR_RELEASE_VERSION_MINOR)
+   #error "Incompatible SERVICECOM_AR_RELEASE_VERSION_MINOR!"
 #endif
 
 /******************************************************************************/
@@ -42,14 +42,14 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-VAR(module_ServiceCom, COM_VAR) ServiceCom;
+VAR(module_ServiceCom, SERVICECOM_VAR) ServiceCom;
 
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, COM_CODE) module_ServiceCom::InitFunction(
-      CONSTP2CONST(ConstModule_TypeAbstract, COM_CONST,       COM_APPL_CONST) lptrConstModule
-   ,  CONSTP2CONST(CfgModule_TypeAbstract,   COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::InitFunction(
+      CONSTP2CONST(ConstModule_TypeAbstract, SERVICECOM_CONST,       SERVICECOM_APPL_CONST) lptrConstModule
+   ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICECOM_CONFIG_DATA, SERVICECOM_APPL_CONST) lptrCfgModule
 ){
 #if(STD_ON == ServiceCom_InitCheck)
    if(
@@ -83,14 +83,14 @@ FUNC(void, COM_CODE) module_ServiceCom::InitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  COM_E_UNINIT
+         ,  SERVICECOM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::DeInitFunction(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::DeInitFunction(
    void
 ){
 #if(STD_ON == ServiceCom_InitCheck)
@@ -108,14 +108,14 @@ FUNC(void, COM_CODE) module_ServiceCom::DeInitFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  COM_E_UNINIT
+         ,  SERVICECOM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::MainFunction(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::MainFunction(
    void
 ){
 #if(STD_ON == ServiceCom_InitCheck)
@@ -132,194 +132,194 @@ FUNC(void, COM_CODE) module_ServiceCom::MainFunction(
             0 //TBD: IdModule
          ,  0 //TBD: IdInstance
          ,  0 //TBD: IdApi
-         ,  COM_E_UNINIT
+         ,  SERVICECOM_E_UNINIT
       );
 #endif
    }
 #endif
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::MainFunctionRx(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::MainFunctionRx(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::MainFunctionTx(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::MainFunctionTx(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::IpduGroupStart(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::IpduGroupStart(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::IpduGroupStop(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::IpduGroupStop(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::EnableReceptionDM(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::EnableReceptionDM(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::DisableReceptionDM(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::DisableReceptionDM(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::GetStatus(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::GetStatus(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::SendSignal(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::SendSignal(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::SendDynSignal(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::SendDynSignal(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::ReceiveSignal(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::ReceiveSignal(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::ReceiveDynSignal(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::ReceiveDynSignal(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::SendSignalGroup(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::SendSignalGroup(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::ReceiveSignalGroup(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::ReceiveSignalGroup(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::SendSignalGroupArray(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::SendSignalGroupArray(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::ReceiveSignalGroupArray(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::ReceiveSignalGroupArray(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::InvalidateSignal(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::InvalidateSignal(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::InvalidateSignalGroup(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::InvalidateSignalGroup(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::TriggerIpduSend(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::TriggerIpduSend(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::TriggerIpduSendWithMetaData(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::TriggerIpduSendWithMetaData(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::SwitchIpduTxMode(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::SwitchIpduTxMode(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbTriggerTransmit(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbTriggerTransmit(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::RxIndication(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::RxIndication(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbTpRxIndication(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbTpRxIndication(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::TxConfirmation(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::TxConfirmation(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbTpTxConfirmation(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbTpTxConfirmation(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbStartOfReception(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbStartOfReception(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbCopyRxData(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbCopyRxData(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbCopyTxData(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbCopyTxData(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbTxAck(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbTxAck(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbTxErr(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbTxErr(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbTxTOut(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbTxTOut(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbRxAck(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbRxAck(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbRxTOut(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbRxTOut(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbRxInv(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbRxInv(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CbCounterErr(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CbCounterErr(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CallOutRxIpdu(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CallOutRxIpdu(
    void
 ){
 }
 
-FUNC(void, COM_CODE) module_ServiceCom::CallOutTxIpdu(
+FUNC(void, SERVICECOM_CODE) module_ServiceCom::CallOutTxIpdu(
    void
 ){
 }

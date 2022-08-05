@@ -24,7 +24,7 @@
 /* TYPEDEFS                                                                   */
 /******************************************************************************/
 class module_ServiceCom:
-      INTERFACES_EXPORTED_COM
+      INTERFACES_EXMCALPORTED_SERVICECOM
       public abstract_module
    ,  public class_ServiceCom_Functionality
 {
@@ -39,16 +39,16 @@ class module_ServiceCom:
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-      FUNC(void, COM_CODE) InitFunction(
-            CONSTP2CONST(ConstModule_TypeAbstract, COM_CONST,       COM_APPL_CONST) lptrConstModule
-         ,  CONSTP2CONST(CfgModule_TypeAbstract,   COM_CONFIG_DATA, COM_APPL_CONST) lptrCfgModule
+      FUNC(void, SERVICECOM_CODE) InitFunction(
+            CONSTP2CONST(ConstModule_TypeAbstract, SERVICECOM_CONST,       SERVICECOM_APPL_CONST) lptrConstModule
+         ,  CONSTP2CONST(CfgModule_TypeAbstract,   SERVICECOM_CONFIG_DATA, SERVICECOM_APPL_CONST) lptrCfgModule
       );
-      FUNC(void, COM_CODE) DeInitFunction (void);
-      FUNC(void, COM_CODE) MainFunction   (void);
-      COM_CORE_FUNCTIONALITIES
+      FUNC(void, SERVICECOM_CODE) DeInitFunction (void);
+      FUNC(void, SERVICECOM_CODE) MainFunction   (void);
+      SERVICECOM_CORE_FUNCTIONALITIES
 
-      FUNC(void, COM_CODE) MainFunctionRx (void);
-      FUNC(void, COM_CODE) MainFunctionTx (void);
+      FUNC(void, SERVICECOM_CODE) MainFunctionRx (void);
+      FUNC(void, SERVICECOM_CODE) MainFunctionTx (void);
 };
 
 /******************************************************************************/
@@ -62,7 +62,7 @@ class module_ServiceCom:
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-extern VAR(module_ServiceCom, COM_VAR) ServiceCom;
+extern VAR(module_ServiceCom, SERVICECOM_VAR) ServiceCom;
 
 /******************************************************************************/
 /* EOF                                                                        */
