@@ -1,13 +1,13 @@
 #pragma once
 /******************************************************************************/
-/* File   : ServiceCom.hpp                                                           */
+/* File   : ServiceCom.hpp                                                    */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "ConstServiceCom.hpp"
+#include "infServiceCom_ServiceNvM_Types.hpp"
 #include "CfgServiceCom.hpp"
 #include "ServiceCom_core.hpp"
 #include "infServiceCom_Exp.hpp"
