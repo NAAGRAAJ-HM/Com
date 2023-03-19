@@ -1,5 +1,5 @@
 /******************************************************************************/
-/* File   : ServiceCom.cpp                                                    */
+/* File   : ServiceSwcCom.cpp                                                 */
 /* Author : NAGARAJA HM (c) since 1982. All rights reserved.                  */
 /******************************************************************************/
 
@@ -8,8 +8,9 @@
 /******************************************************************************/
 #include "Std_Types.hpp"
 
-#include "ServiceCom.hpp"
-#include "infServiceCom_ServiceSwcEcuM.hpp"
+#include "ServiceSwcCom.hpp"
+
+#include "infServiceSwcComServiceSwcEcuM.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -38,9 +39,9 @@
 /******************************************************************************/
 /* FUNCTIONS                                                                  */
 /******************************************************************************/
-FUNC(void, SERVICECOM_CODE) ServiceCom_InitFunction   (const CfgServiceCom_Type* CfgServiceCom_ptr){UNUSED(CfgServiceCom_ptr);}
-FUNC(void, SERVICECOM_CODE) ServiceCom_DeInitFunction (void){}
-FUNC(void, SERVICECOM_CODE) ServiceCom_MainFunction   (void){}
+FUNC(void, SERVICESWCCOM_CODE) infServiceSwcComServiceSwcEcuM_InitFunction   (const CfgServiceSwcCom_Type* CfgServiceSwcCom_ptr){UNUSED(CfgServiceSwcCom_ptr);}
+FUNC(void, SERVICESWCCOM_CODE) infServiceSwcComServiceSwcEcuM_DeInitFunction (void){}
+FUNC(void, SERVICESWCCOM_CODE) infServiceSwcComServiceSwcSchM_MainFunction   (void){}
 
 /******************************************************************************/
 /* EOF                                                                        */
