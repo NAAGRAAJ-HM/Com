@@ -1,5 +1,6 @@
+#pragma once
 /******************************************************************************/
-/* File   : SwcServiceCom.cpp                                                 */
+/* File   : infSwcServiceComSwcServiceSchM.hpp                                */
 /*                                                                            */
 /* Author : Raajnaag HULIYAPURADA MATA                                        */
 /*                                                                            */
@@ -23,12 +24,7 @@
 /******************************************************************************/
 /* #INCLUDES                                                                  */
 /******************************************************************************/
-#include "Std_Types.hpp"
-
-#include "SwcServiceCom.hpp"
-
-#include "infSwcServiceComSwcServiceEcuM.hpp"
-#include "infSwcServiceComSwcServiceSchM.hpp"
+#include "CfgSwcServiceCom.hpp"
 
 /******************************************************************************/
 /* #DEFINES                                                                   */
@@ -43,6 +39,12 @@
 /******************************************************************************/
 
 /******************************************************************************/
+/* FUNCTIONS                                                                  */
+/******************************************************************************/
+extern FUNC(void, SWCSERVICECOM_CODE) infSwcServiceComSwcServiceSchM_vMainFunctionRx(void);
+extern FUNC(void, SWCSERVICECOM_CODE) infSwcServiceComSwcServiceSchM_vMainFunctionTx(void);
+
+/******************************************************************************/
 /* CONSTS                                                                     */
 /******************************************************************************/
 
@@ -53,14 +55,6 @@
 /******************************************************************************/
 /* OBJECTS                                                                    */
 /******************************************************************************/
-
-/******************************************************************************/
-/* FUNCTIONS                                                                  */
-/******************************************************************************/
-FUNC(void, SWCSERVICECOM_CODE) infSwcServiceComSwcServiceEcuM_InitFunction    (const CfgSwcServiceCom_tst* CfgSwcServiceCom_ptr){UNUSED(CfgSwcServiceCom_ptr);}
-FUNC(void, SWCSERVICECOM_CODE) infSwcServiceComSwcServiceEcuM_DeInitFunction  (void){}
-FUNC(void, SWCSERVICECOM_CODE) infSwcServiceComSwcServiceSchM_vMainFunctionRx (void){}
-FUNC(void, SWCSERVICECOM_CODE) infSwcServiceComSwcServiceSchM_vMainFunctionTx (void){}
 
 /******************************************************************************/
 /* EOF                                                                        */
