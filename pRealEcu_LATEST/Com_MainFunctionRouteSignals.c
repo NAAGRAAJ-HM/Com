@@ -7,7 +7,7 @@
 static INLINE FUNC(Std_ReturnType, COM_CODE) Com_ReadSigGwReceiveQueue(Type_SwcServiceCom_tIdPdu*             ComRxPduId
    ,     Com_RxGwQueueIndexType l_Com_RxGwQueueWrite_ux);
 
-LOCAL_INLINE FUNC(void,COM_CODE)    Com_Lok_PrepareTxIpdu(void);
+LOCAL_INLINE FUNC(void, COM_CODE)    Com_Lok_PrepareTxIpdu(void);
 
 LOCAL_INLINE FUNC(void, COM_CODE)   Com_Lok_ReadRxQueueAndProcess(void);
 
@@ -98,7 +98,7 @@ static INLINE FUNC(Std_ReturnType, COM_CODE) Com_ReadSigGwReceiveQueue( Type_Swc
     return(retVal_uo);
 }
 
-LOCAL_INLINE FUNC(void,COM_CODE) Com_Lok_PrepareTxIpdu(void){
+LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_PrepareTxIpdu(void){
 
    Com_TxIpduConstPtrType       TxIPduConstPtr;
    Com_TxIpduRamPtrType         TxIpduRamPtr;

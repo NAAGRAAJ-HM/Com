@@ -6,7 +6,7 @@
 //TBD: Optimize code
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
-FUNC(void,COM_CODE) Com_SwitchIpduTxMode(
+FUNC(void, COM_CODE) Com_SwitchIpduTxMode(
       VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId
    ,  VAR(boolean,                   AUTOMATIC) Mode
 ){

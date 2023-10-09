@@ -20,12 +20,12 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_IpduBuffToSecondBuff(
                                                               );
 
 #if defined(COM_RxSigGrpInvalid) || defined (COM_RxFilters)
-LOCAL_INLINE FUNC(uint8,COM_CODE) Com_Lok_ValidateRxSignalGroup(
+LOCAL_INLINE FUNC(uint8, COM_CODE) Com_Lok_ValidateRxSignalGroup(
                                                 VAR(Com_SignalGroupIdType,AUTOMATIC)            SigGrpId
    ,     P2CONST(uint8, AUTOMATIC, COM_APPL_DATA)        BufferPtr
                                                                );
 
-LOCAL_INLINE FUNC(uint8,COM_CODE) Com_Lok_ValidateRxGroupSignal(VAR(uint16_least, AUTOMATIC)    Idx_GrpSig_ui
+LOCAL_INLINE FUNC(uint8, COM_CODE) Com_Lok_ValidateRxGroupSignal(VAR(uint16_least, AUTOMATIC)    Idx_GrpSig_ui
    ,     VAR(Com_SigMaxType, AUTOMATIC)  RxNewVal_GrpSig);
 #endif
 
@@ -332,7 +332,7 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_CopySecondaryBuffer(Com_RxSigGrpConstP
 
 #if defined(COM_RxSigGrpInvalid) || defined (COM_RxFilters)
 
-LOCAL_INLINE FUNC(uint8,COM_CODE) Com_Lok_ValidateRxSignalGroup(
+LOCAL_INLINE FUNC(uint8, COM_CODE) Com_Lok_ValidateRxSignalGroup(
                                                 VAR(Com_SignalGroupIdType, AUTOMATIC)       SigGrpId
    ,     P2CONST(uint8, AUTOMATIC, COM_APPL_DATA)    BufferPtr
                                                                )
@@ -418,7 +418,7 @@ LOCAL_INLINE FUNC(uint8,COM_CODE) Com_Lok_ValidateRxSignalGroup(
     return(ValidateSigGrp_u8);
 }
 
-LOCAL_INLINE FUNC(uint8,COM_CODE) Com_Lok_ValidateRxGroupSignal(VAR(uint16_least, AUTOMATIC)        Idx_GrpSig_ui
+LOCAL_INLINE FUNC(uint8, COM_CODE) Com_Lok_ValidateRxGroupSignal(VAR(uint16_least, AUTOMATIC)        Idx_GrpSig_ui
    ,     VAR(Com_SigMaxType, AUTOMATIC)      RxNewVal_GrpSig)
 {
 

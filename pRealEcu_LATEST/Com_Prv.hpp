@@ -229,7 +229,7 @@ FUNC(void, COM_CODE) Com_Lok_SendIpdu( VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC)
    ,     VAR(Com_SendIpduInfo, AUTOMATIC) sendIpduFlag_u16
 );
 
-FUNC(void,COM_CODE) Com_TxChangeMode(VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC) TxIpduId);
+FUNC(void, COM_CODE) Com_TxChangeMode(VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC) TxIpduId);
 
 FUNC(void, COM_CODE) Com_Lok_ProcessSignal(
                                 VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC)                       RxPduId
@@ -237,7 +237,7 @@ FUNC(void, COM_CODE) Com_Lok_ProcessSignal(
 );
 
 FUNC(void, COM_CODE) Com_TxIPduStop(VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC) IpduId);
-FUNC (void,COM_CODE) Com_Lok_ClearUpdateBits( Com_TxIpduConstPtrType TxIPduConstPtr);
+FUNC (void, COM_CODE) Com_Lok_ClearUpdateBits( Com_TxIpduConstPtrType TxIPduConstPtr);
 FUNC(Std_ReturnType, COM_CODE) Com_WriteSigGwReceiveQueue(Type_SwcServiceCom_tIdPdu ComRxPduId);
 FUNC(void, COM_CODE) Com_Lok_PackRxSignalGwBufferData(Com_RxSigConstPtrType RxSigConstPtr,Com_SignalIdType l_TxGwDestId);
 FUNC(void, COM_CODE) Com_InternalProcessTxConfirmation(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) TxPduId);

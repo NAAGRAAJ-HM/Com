@@ -19,7 +19,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_CopyRxSignal(
                                                          );
 
 #if defined(COM_RxSigInvalid) || defined (COM_RxFilters)
-LOCAL_INLINE FUNC(boolean,COM_CODE) Com_Lok_ValidateRxSignal(
+LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ValidateRxSignal(
                                         VAR(Com_SignalIdType, AUTOMATIC)                SignalId
    ,     P2VAR(Com_SigMaxType, AUTOMATIC, COM_APPL_DATA) RxNewValPtr
                                                             );
@@ -375,7 +375,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_CopyRxSignal(
 
 #if defined(COM_RxSigInvalid) || defined (COM_RxFilters)
 
-LOCAL_INLINE FUNC(boolean,COM_CODE) Com_Lok_ValidateRxSignal(
+LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ValidateRxSignal(
                                                 VAR(Com_SignalIdType, AUTOMATIC)                SignalId
    ,     P2VAR(Com_SigMaxType, AUTOMATIC, COM_APPL_DATA) RxNewValPtr
                                                             )
