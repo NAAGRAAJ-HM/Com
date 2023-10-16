@@ -110,7 +110,7 @@ LOCAL_INLINE boolean Com_CheckRxIPduStatus(
     return Com_GetRamValue(
          RXIPDU
       ,  _PDUSTATUS
-      ,  Com_RxIpduRam_s[IpduId].RxFlags
+      ,  COM_GET_RXPDURAM_S(IpduId).RxFlags
    );
 }
 

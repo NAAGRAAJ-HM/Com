@@ -314,19 +314,19 @@ extern FUNC(uint8, COM_CODE) Com_ReadRxIPduLength(
 
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
-extern FUNC(void, COM_CODE) Com_SwitchIpduTxMode(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId, VAR(boolean, AUTOMATIC)  Mode);
+extern FUNC(void,COM_CODE) Com_SwitchIpduTxMode(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId, VAR(boolean, AUTOMATIC)  Mode);
 #define COM_STOP_SEC_CODE
 #include "Com_MemMap.hpp"
 
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
-extern FUNC(boolean, COM_CODE) Com_ProvideRxIpduStatus(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId);
+extern FUNC(boolean,COM_CODE) Com_ProvideRxIpduStatus(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId);
 #define COM_STOP_SEC_CODE
 #include "Com_MemMap.hpp"
 
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
-extern FUNC(boolean, COM_CODE) Com_ProvideTxIpduStatus(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId);
+extern FUNC(boolean,COM_CODE) Com_ProvideTxIpduStatus(VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) PduId);
 #define COM_STOP_SEC_CODE
 #include "Com_MemMap.hpp"
 

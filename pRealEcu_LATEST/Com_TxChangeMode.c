@@ -5,7 +5,7 @@
 
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
-FUNC(void, COM_CODE) Com_TxChangeMode(
+FUNC(void,COM_CODE) Com_TxChangeMode(
    VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC) TxIpduId
 ){
    VAR(uint8,   AUTOMATIC)    LatestTransMode_u8;
