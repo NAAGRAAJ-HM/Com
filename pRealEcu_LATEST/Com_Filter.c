@@ -6,7 +6,7 @@
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
 FUNC(boolean, COM_CODE) Com_Filter( VAR(uint32, AUTOMATIC) NewVal, VAR(uint8, AUTOMATIC) Algorithm
-   ,     VAR(Com_FilterType, AUTOMATIC) FilterIndex, VAR(boolean,AUTOMATIC) CallContext_b )
+   ,     VAR(Com_FilterType, AUTOMATIC) FilterIndex, VAR(boolean, AUTOMATIC) CallContext_b )
 {
 
    VAR(boolean, AUTOMATIC) State;

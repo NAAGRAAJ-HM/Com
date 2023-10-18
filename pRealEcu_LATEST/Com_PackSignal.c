@@ -79,7 +79,7 @@ FUNC(void, COM_CODE) Com_PackSignal( VAR(uint8, AUTOMATIC)                  Endi
 #include "Com_MemMap.hpp"
 
 FUNC(void, COM_CODE) Com_PackFloatSignal(VAR(uint8, AUTOMATIC) Endianess, VAR(Com_BitpositionType, AUTOMATIC) Bit_Pos
-   ,     VAR(float64,AUTOMATIC) Src, P2VAR(uint8, AUTOMATIC, COM_APPL_DATA) Dest_Buf)
+   ,     VAR(float64, AUTOMATIC) Src, P2VAR(uint8, AUTOMATIC, COM_APPL_DATA) Dest_Buf)
 {
    VAR(Type_SwcServiceCom_tLengthPdu, AUTOMATIC) ByteNo;
    VAR(Type_SwcServiceCom_tLengthPdu, AUTOMATIC) NoofBytes;

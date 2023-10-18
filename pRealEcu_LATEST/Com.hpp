@@ -306,8 +306,8 @@ extern FUNC(boolean, COM_CODE) Com_IsTxScheduled(VAR(Type_SwcServiceCom_tIdPdu, 
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
 extern FUNC(uint8, COM_CODE) Com_ReadRxIPduLength(
-                                      VAR(Type_SwcServiceCom_tIdPdu,AUTOMATIC)                     RxPduId
-   ,     P2VAR(Type_SwcServiceCom_tLengthPdu,AUTOMATIC,COM_APPL_DATA) RxIPduLengthPtr
+                                      VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC)                     RxPduId
+   ,     P2VAR(Type_SwcServiceCom_tLengthPdu, AUTOMATIC,COM_APPL_DATA) RxIPduLengthPtr
                                                  );
 #define COM_STOP_SEC_CODE
 #include "Com_MemMap.hpp"

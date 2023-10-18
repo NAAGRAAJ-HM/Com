@@ -4,7 +4,7 @@
 
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
-FUNC(void, COM_CODE) Com_ByteCopyInit(P2VAR(uint8,AUTOMATIC, COM_APPL_DATA) dest
+FUNC(void, COM_CODE) Com_ByteCopyInit(P2VAR(uint8, AUTOMATIC, COM_APPL_DATA) dest
    ,     VAR(uint32, AUTOMATIC) Init_Val
    ,     VAR(uint32, AUTOMATIC) Len)
 {

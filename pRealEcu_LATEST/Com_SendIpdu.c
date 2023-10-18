@@ -37,7 +37,7 @@ FUNC(void, COM_CODE) Com_Lok_SendIpdu(
          sendIpduFlag_u16.isEventTrig
       != COM_RESET
    ){
-      VAR(boolean,AUTOMATIC) isEventMode;
+      VAR(boolean, AUTOMATIC) isEventMode;
       TxIpduRamPtr->Com_n_Tick_Tx = 0;
       if(
             sendIpduFlag_u16.isModeChangd
@@ -198,7 +198,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_LoadEventModeInfo(
       VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC) ComTxPduId
    ,  VAR(Com_SendIpduInfo,          AUTOMATIC) sendIpduFlag_u16
 ){
-   VAR(boolean,AUTOMATIC)  SendIpdu_b     = COM_FALSE;
+   VAR(boolean, AUTOMATIC)  SendIpdu_b     = COM_FALSE;
    Com_TxIpduConstPtrType  TxIPduConstPtr = COM_GET_TX_IPDU_CONSTDATA(ComTxPduId);
    Com_TxIpduRamPtrType    TxIpduRamPtr   = &COM_GET_TXPDURAM_S(ComTxPduId);
    if(

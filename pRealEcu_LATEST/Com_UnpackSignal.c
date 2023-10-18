@@ -102,7 +102,7 @@ FUNC(uint32, COM_CODE) Com_UnpackOpaqueSignal(VAR(Com_BitpositionType, AUTOMATIC
 #include "Com_MemMap.hpp"
 
 FUNC(float64, COM_CODE) Com_UnPackFloatSignal(VAR(uint8, AUTOMATIC) Endianess, VAR(Com_BitpositionType, AUTOMATIC) Bit_Pos
-   ,     P2CONST(uint8,AUTOMATIC,COM_APPL_DATA) Src_Buf)
+   ,     P2CONST(uint8, AUTOMATIC,COM_APPL_DATA) Src_Buf)
 {
 
    VAR(Type_SwcServiceCom_tLengthPdu, AUTOMATIC) ByteNo;

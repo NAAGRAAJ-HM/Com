@@ -54,8 +54,8 @@ FUNC(uint8, COM_CODE) Com_SendSignalGroupArray( Com_SignalGroupIdType SignalGrou
                 SchM_Enter_Com_TxIpduProtArea(SENDSIGNALGRP);
 
                 Com_ByteCopy(
-                   ( P2VAR(uint8,AUTOMATIC,COM_APPL_DATA) )( TxIpduConstPtr->BuffPtr + TxSigGrpArrayConstPtr->FirstByteNo )
-   ,     ( P2CONST(uint8,AUTOMATIC,COM_APPL_DATA) )( SignalGroupArrayPtr )
+                   ( P2VAR(uint8, AUTOMATIC,COM_APPL_DATA) )( TxIpduConstPtr->BuffPtr + TxSigGrpArrayConstPtr->FirstByteNo )
+   ,     ( P2CONST(uint8, AUTOMATIC,COM_APPL_DATA) )( SignalGroupArrayPtr )
    ,     ( uint32  )( TxSigGrpArrayConstPtr->Length ) );
                 SchM_Exit_Com_TxIpduProtArea(SENDSIGNALGRP);
     #  ifdef COM_EffectiveSigGrpTOC

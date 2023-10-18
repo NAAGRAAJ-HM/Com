@@ -24,7 +24,7 @@ FUNC(void, COM_CODE) Com_IpduGroupControl(
 ){
    Com_RxIpduRamPtrType            RxIPduRamPtr;
    Com_TxIpduRamPtrType            TxIPduRamPtr;
-   VAR(uint16_least,AUTOMATIC)     Index_u16;
+   VAR(uint16_least, AUTOMATIC)     Index_u16;
    Com_ReceptionDMControl(ipduGroupVector);
    Com_Lok_ProcessIPduGroupVector((P2CONST(uint8, AUTOMATIC, COM_APPL_DATA))ipduGroupVector);
    RxIPduRamPtr   = &COM_GET_RXPDURAM_S(0);

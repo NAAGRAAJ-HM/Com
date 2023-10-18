@@ -6,7 +6,7 @@
 #ifdef COM_RX_SIGNALGROUP
 #ifdef COM_RxSigGrpUpdateBit
 LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigGrpUpdateBit(
-                                                VAR(Com_SignalGroupIdType,AUTOMATIC)            SigGrpId
+                                                VAR(Com_SignalGroupIdType, AUTOMATIC)            SigGrpId
    ,     P2CONST(Type_SwcServiceCom_stInfoPdu, AUTOMATIC, COM_APPL_DATA)  PduInfoPtr
    ,     VAR(uint8, AUTOMATIC)                           UpdateBitStatus
    ,     P2VAR(uint16_least, AUTOMATIC, COM_APPL_DATA)   Idx_SigToutPtr
@@ -14,14 +14,14 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigGrpUpdateBit(
 #endif
 
 LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_IpduBuffToSecondBuff(
-                                                VAR(Com_SignalGroupIdType,AUTOMATIC)            SigGrpId
+                                                VAR(Com_SignalGroupIdType, AUTOMATIC)            SigGrpId
    ,     P2CONST(uint8, AUTOMATIC, COM_APPL_DATA)        BufferPtr
-   ,     VAR(uint8,AUTOMATIC)                            ValidateSigGrp_u8
+   ,     VAR(uint8, AUTOMATIC)                            ValidateSigGrp_u8
                                                               );
 
 #if defined(COM_RxSigGrpInvalid) || defined (COM_RxFilters)
 LOCAL_INLINE FUNC(uint8,COM_CODE) Com_Lok_ValidateRxSignalGroup(
-                                                VAR(Com_SignalGroupIdType,AUTOMATIC)            SigGrpId
+                                                VAR(Com_SignalGroupIdType, AUTOMATIC)            SigGrpId
    ,     P2CONST(uint8, AUTOMATIC, COM_APPL_DATA)        BufferPtr
                                                                );
 
@@ -140,7 +140,7 @@ FUNC(void, COM_CODE) Com_Lok_ProcessSignalGroup(
 #ifdef COM_RxSigGrpUpdateBit
 
 LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigGrpUpdateBit(
-                                                    VAR(Com_SignalGroupIdType,AUTOMATIC)            SigGrpId
+                                                    VAR(Com_SignalGroupIdType, AUTOMATIC)            SigGrpId
    ,     P2CONST(Type_SwcServiceCom_stInfoPdu, AUTOMATIC, COM_APPL_DATA)  PduInfoPtr
    ,     VAR(uint8, AUTOMATIC)                           UpdateBitStatus
    ,     P2VAR(uint16_least, AUTOMATIC, COM_APPL_DATA)   Idx_SigToutPtr
@@ -225,9 +225,9 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigGrpUpdateBit(
 }
 #endif
 
-LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_IpduBuffToSecondBuff(VAR(Com_SignalGroupIdType,AUTOMATIC) SigGrpId
+LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_IpduBuffToSecondBuff(VAR(Com_SignalGroupIdType, AUTOMATIC) SigGrpId
    ,     P2CONST(uint8, AUTOMATIC, COM_APPL_DATA)  BufferPtr
-   ,     VAR(uint8,AUTOMATIC)  ValidateSigGrp_u8 )
+   ,     VAR(uint8, AUTOMATIC)  ValidateSigGrp_u8 )
 {
 
    Com_RxSigGrpConstPtrType            RxSigGrpConstPtr;
@@ -310,7 +310,7 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_CopySecondaryBuffer(Com_RxSigGrpConstP
 # endif
 
             {
-                VAR(Com_SigMaxType,AUTOMATIC) RxGrpSig_NewVal;
+                VAR(Com_SigMaxType, AUTOMATIC) RxGrpSig_NewVal;
 
                 RxGrpSig_NewVal = Com_UnpackSignal( SigEndianess
    ,     RxGrpSigConstPtr->Bit_Pos

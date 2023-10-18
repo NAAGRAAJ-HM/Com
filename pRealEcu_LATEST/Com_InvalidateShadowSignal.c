@@ -38,7 +38,7 @@ FUNC(void, COM_CODE) Com_InternalInvalidateShadowSignal(VAR(Com_SignalIdType, AU
    VAR(uint32, AUTOMATIC)              TxGrpSig_NewVal;
    VAR(uint8, AUTOMATIC)               ConstByteValue_u8;
    VAR(uint8, AUTOMATIC)               Type;
-   VAR(Com_MainFuncType,AUTOMATIC)     txMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)     txMainFuncId;
 
     TxGrpSigConstPtr = COM_GET_TXGRPSIG_CONSTDATA(SignalId);
     Type = Com_GetValue(TXGRPSIG,_TYPE,TxGrpSigConstPtr->txGrpSigFields);

@@ -15,7 +15,7 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_UpdateRxSignalBuffer(
 );
 
 LOCAL_INLINE FUNC(void, COM_CODE) Com_InitializePduBuffWithSignalInitValue(
-      P2VAR(uint8,AUTOMATIC,     COM_APPL_DATA) BuffPtr
+      P2VAR(uint8, AUTOMATIC,     COM_APPL_DATA) BuffPtr
    ,    VAR(Com_SigMaxType,      AUTOMATIC    ) SigInitVal
    ,    VAR(Com_BitpositionType, AUTOMATIC    ) SigBitPos
    ,    VAR(Com_BitsizeType,     AUTOMATIC    ) SigBitSize
@@ -62,9 +62,9 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_SetCurrentTxModePtr(
 LOCAL_INLINE FUNC(void, COM_CODE) Com_UpdateRxSignalBuffer(
       Com_RxSigConstPtrType RxSigConstPtr
    ,     VAR(Com_SigMaxType, AUTOMATIC)      RxNewVal_Sig
-   ,     VAR(Com_MainFuncType,AUTOMATIC)     RxMainFuncId
+   ,     VAR(Com_MainFuncType, AUTOMATIC)     RxMainFuncId
 ){
-   VAR(uint8,AUTOMATIC)    Type;
+   VAR(uint8, AUTOMATIC)    Type;
     Type = Com_GetValue(GEN,_TYPE,RxSigConstPtr->General);
    switch(Type >> 1u){
    case 0x00u:
@@ -77,12 +77,12 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_UpdateRxSignalBuffer(
 }
 
 LOCAL_INLINE FUNC(void, COM_CODE) Com_InitializePduBuffWithSignalInitValue(
-      P2VAR(uint8,AUTOMATIC,COM_APPL_DATA) BuffPtr
-   ,     VAR(Com_SigMaxType,AUTOMATIC)           SigInitVal
-   ,     VAR(Com_BitpositionType,AUTOMATIC)      SigBitPos
-   ,     VAR(Com_BitsizeType,AUTOMATIC)          SigBitSize
-   ,     VAR(uint8,AUTOMATIC)                    SigType
-   ,     VAR(uint8,AUTOMATIC)                    SigEndianess
+      P2VAR(uint8, AUTOMATIC,COM_APPL_DATA) BuffPtr
+   ,     VAR(Com_SigMaxType, AUTOMATIC)           SigInitVal
+   ,     VAR(Com_BitpositionType, AUTOMATIC)      SigBitPos
+   ,     VAR(Com_BitsizeType, AUTOMATIC)          SigBitSize
+   ,     VAR(uint8, AUTOMATIC)                    SigType
+   ,     VAR(uint8, AUTOMATIC)                    SigEndianess
 ){
    if(SigType != (uint8)COM_UINT8_N){
             Com_PackSignal( SigEndianess, SigBitPos, SigBitSize, SigInitVal, BuffPtr );

@@ -11,11 +11,11 @@ FUNC(void, COM_CODE) Com_ShadowBuffToIpduBuff(VAR(Com_SignalGroupIdType, AUTOMAT
    Com_TxIpduConstPtrType              TxIPduConstPtr;
    Com_TxGrpSigConstPtrType            TxGrpSigConstPtr;
    Com_TxSigGrpConstPtrType            TxSigGrpConstPtr;
-   VAR(Com_SigMaxType,AUTOMATIC)       TxGrpSig_NewVal;
+   VAR(Com_SigMaxType, AUTOMATIC)       TxGrpSig_NewVal;
    VAR(uint16_least, AUTOMATIC)        index_ui;
    VAR(uint8, AUTOMATIC)               SigType_u8;
    VAR(uint8, AUTOMATIC)               ConstByteValue_u8;
-   VAR(Com_MainFuncType,AUTOMATIC)     txMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)     txMainFuncId;
 
     TxSigGrpConstPtr = COM_GET_TXSIGGRP_CONSTDATA(SignalGrpId);
 

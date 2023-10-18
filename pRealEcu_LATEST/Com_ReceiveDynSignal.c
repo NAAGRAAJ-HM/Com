@@ -12,7 +12,7 @@ FUNC(uint8, COM_CODE) Com_ReceiveDynSignal(        VAR(Com_SignalIdType, AUTOMAT
 {
    Com_RxSigConstPtrType RxSigConstPtr;
    Type_SwcServiceCom_tLengthPdu         StartByteNo;
-   VAR(uint16,AUTOMATIC) DynLength;
+   VAR(uint16, AUTOMATIC) DynLength;
    VAR(Com_SigBuffIndexType, AUTOMATIC) SigBuff_Index;
    VAR(uint8, AUTOMATIC) Type;
    VAR(uint8, AUTOMATIC) Status;
@@ -55,7 +55,7 @@ FUNC(uint8, COM_CODE) Com_ReceiveDynSignal(        VAR(Com_SignalIdType, AUTOMAT
                 * LengthPtr = DynLength;
                 if(0u != DynLength)
                 {
-                    VAR(Com_MainFuncType,AUTOMATIC) rxMainFuncId;
+                    VAR(Com_MainFuncType, AUTOMATIC) rxMainFuncId;
 
                     rxMainFuncId = (COM_GET_RX_IPDU_CONSTDATA(RxSigConstPtr->IpduRef))->MainFunctionRef;
 

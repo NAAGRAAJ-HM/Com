@@ -42,13 +42,13 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_SigGrpBasedTimeoutMonitoring(
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
 
-FUNC(void, COM_CODE) Com_InternalMainFunctionRx( VAR(Com_MainFuncType,AUTOMATIC) RxMainFuncId )
+FUNC(void, COM_CODE) Com_InternalMainFunctionRx( VAR(Com_MainFuncType, AUTOMATIC) RxMainFuncId )
 {
    Com_RxIpduConstPtrType              RxIPduConstPtr;
    Com_RxIpduRamPtrType                RxIpduRamPtr;
    VAR(uint16_least, AUTOMATIC)        Idx_Pdu_ui;
-   VAR(Type_CfgSwcServiceCom_tIdIPdu,AUTOMATIC)       StartIPduId;
-   VAR(Type_CfgSwcServiceCom_tIdIPdu,AUTOMATIC)       EndIPduId;
+   VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC)       StartIPduId;
+   VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC)       EndIPduId;
 
    if(
 #if(COM_CONFIGURATION_USE_DET == STD_ON)
@@ -72,7 +72,7 @@ FUNC(void, COM_CODE) Com_InternalMainFunctionRx( VAR(Com_MainFuncType,AUTOMATIC)
             {
 #if defined(COM_RxIPduDeferredProcessing) || \
     defined(COM_RxIPduTimeout) || defined(COM_RxSigUpdateTimeout) || defined(COM_RxSigGrpUpdateTimeout)
-                VAR(boolean,AUTOMATIC)  RxIndication_b;
+                VAR(boolean, AUTOMATIC)  RxIndication_b;
 
                 RxIndication_b = Com_GetRamValue(RXIPDU,_INDICATION,RxIpduRamPtr->RxFlags);
 #endif
@@ -279,7 +279,7 @@ LOCAL_INLINE FUNC(boolean,COM_CODE) Com_Lok_IPduBasedSigTimeoutAction( VAR(Type_
    Com_RxSigRamPtrType                     RxSigRamPtr;
 #endif
    VAR(uint16_least, AUTOMATIC)            Idx_Sig_ui;
-   VAR(Com_MainFuncType,AUTOMATIC)         RxMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)         RxMainFuncId;
 
    VAR(boolean, AUTOMATIC)                 isGwSigUpdated_b;
 
@@ -306,7 +306,7 @@ LOCAL_INLINE FUNC(boolean,COM_CODE) Com_Lok_IPduBasedSigTimeoutAction( VAR(Type_
             {
                 VAR(Com_SigMaxType, AUTOMATIC) RxSigVal;
 #if(defined(COM_RXSIG_INT64) || defined(COM_RXSIG_FLOAT64SUPP))
-                VAR(uint8,AUTOMATIC)           Type;
+                VAR(uint8, AUTOMATIC)           Type;
 
                 Type     = Com_GetValue(GEN,_TYPE,RxSigConstPtr->General);
 #endif
@@ -434,7 +434,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_SigBasedTimeoutMonitoring( VAR(Type
    P2VAR(uint16, AUTOMATIC, COM_APPL_DATA)                     SigTimeOutTicksPtr;
    VAR(uint16_least, AUTOMATIC)                                NoOfSigOrSigGrp_ui;
    VAR(uint16_least, AUTOMATIC)                                Idx_Sig_ui;
-   VAR(Com_MainFuncType,AUTOMATIC)                             RxMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)                             RxMainFuncId;
 #ifdef COM_RxUpdateTimeoutNotify
    VAR(boolean, AUTOMATIC)                                     CallTOSigNotify_b;
 #endif
@@ -480,7 +480,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_SigBasedTimeoutMonitoring( VAR(Type
             {
                 VAR(Com_SigMaxType, AUTOMATIC) RxSigVal;
 #if(defined( COM_RXSIG_INT64 ) || defined( COM_RXSIG_FLOAT64SUPP ))
-                VAR(uint8,AUTOMATIC)           Type;
+                VAR(uint8, AUTOMATIC)           Type;
 
                 Type     = Com_GetValue(GEN,_TYPE,RxSigConstPtr->General);
 #endif
@@ -560,7 +560,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_SigGrpBasedTimeoutMonitoring( VAR(T
    P2VAR(uint16, AUTOMATIC, COM_APPL_DATA)                     SigTimeOutTicksPtr;
    VAR(uint16_least, AUTOMATIC)                                NoOfSigOrSigGrp_ui;
    VAR(uint16_least, AUTOMATIC)                                Idx_Sig_ui;
-   VAR(Com_MainFuncType,AUTOMATIC)                             RxMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)                             RxMainFuncId;
 #ifdef COM_RxUpdateTimeoutNotify
 
    VAR(boolean, AUTOMATIC)                                     CallTOSigGrpNotify_b;

@@ -115,7 +115,7 @@ FUNC(void, COM_CODE) Com_Lok_PackRxGrpSigGwBufferData( Com_RxGrpSigConstPtrType 
    VAR(Com_RxGrpSigBuffIndexType, AUTOMATIC) rxGrpSignalBuffIndex;
    VAR(uint8, AUTOMATIC)                   Type;
    VAR(Com_MainFuncType, AUTOMATIC)        rxMainFuncId;
-   VAR(Com_MainFuncType,AUTOMATIC)         txMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)         txMainFuncId;
 
     TxGrpSigConstPtr = COM_GET_TXGRPSIG_CONSTDATA(l_TxGwDestId);
 

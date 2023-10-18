@@ -5,7 +5,7 @@
 
 #ifdef COM_RxSigUpdateBit
 LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigUpdateBit(
-                                        VAR(Com_SignalIdType,AUTOMATIC)                 SignalId
+                                        VAR(Com_SignalIdType, AUTOMATIC)                 SignalId
    ,     P2CONST(Type_SwcServiceCom_stInfoPdu, AUTOMATIC, COM_APPL_DATA)  PduInfoPtr
    ,     VAR(uint8, AUTOMATIC)                           UpdateBitStatus
    ,     P2VAR(uint16_least, AUTOMATIC, COM_APPL_DATA)   Idx_SigToutPtr
@@ -13,7 +13,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigUpdateBit(
 #endif
 
 LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_CopyRxSignal(
-                                        VAR(Com_SignalIdType,AUTOMATIC)                 SignalId
+                                        VAR(Com_SignalIdType, AUTOMATIC)                 SignalId
    ,     P2CONST(Type_SwcServiceCom_stInfoPdu, AUTOMATIC, COM_APPL_DATA)  PduInfoPtr
    ,     VAR(Com_BitsizeType, AUTOMATIC)                 Size
                                                          );
@@ -156,7 +156,7 @@ FUNC(void, COM_CODE) Com_Lok_ProcessSignal(
 #ifdef COM_RxSigUpdateBit
 
 LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigUpdateBit(
-                                                    VAR(Com_SignalIdType,AUTOMATIC)                 SignalId
+                                                    VAR(Com_SignalIdType, AUTOMATIC)                 SignalId
    ,     P2CONST(Type_SwcServiceCom_stInfoPdu, AUTOMATIC, COM_APPL_DATA)  PduInfoPtr
    ,     VAR(uint8, AUTOMATIC)                           UpdateBitStatus
    ,     P2VAR(uint16_least, AUTOMATIC, COM_APPL_DATA)   Idx_SigToutPtr
@@ -240,7 +240,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_ProcessSigUpdateBit(
 #endif
 
 LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_CopyRxSignal(
-                                              VAR(Com_SignalIdType,AUTOMATIC)                 SignalId
+                                              VAR(Com_SignalIdType, AUTOMATIC)                 SignalId
    ,     P2CONST(Type_SwcServiceCom_stInfoPdu, AUTOMATIC, COM_APPL_DATA)  PduInfoPtr
    ,     VAR(Com_BitsizeType, AUTOMATIC)                 Size
                                                          )
@@ -322,7 +322,7 @@ LOCAL_INLINE FUNC(boolean, COM_CODE) Com_Lok_CopyRxSignal(
 
            )
         {
-            VAR(Com_SigBuffIndexType,AUTOMATIC) SigBuff_Index;
+            VAR(Com_SigBuffIndexType, AUTOMATIC) SigBuff_Index;
 
             SigBuff_Index = RxSigConstPtr->SigBuff_Index;
 
@@ -401,7 +401,7 @@ LOCAL_INLINE FUNC(boolean,COM_CODE) Com_Lok_ValidateRxSignal(
         {
             if( InvAction == (uint8)COM_REPLACE )
             {
-                VAR(Com_SigMaxType,AUTOMATIC) RxSigVal;
+                VAR(Com_SigMaxType, AUTOMATIC) RxSigVal;
 
                 RxSigVal = (Com_SigMaxType)RxSigConstPtr->Init_Val;
 

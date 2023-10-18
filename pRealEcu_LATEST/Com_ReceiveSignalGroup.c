@@ -15,7 +15,7 @@ FUNC(uint8, COM_CODE) Com_ReceiveSignalGroup(VAR(Com_SignalGroupIdType, AUTOMATI
    VAR(Com_RxGrpSigBuffIndexType, AUTOMATIC) rxGrpSignalBuffIndex;
    VAR(uint8, AUTOMATIC)               Type;
    VAR(uint8, AUTOMATIC)               Status_u8;
-   VAR(Com_MainFuncType,AUTOMATIC)     rxMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)     rxMainFuncId;
 
     Status_u8 = COM_SERVICE_NOT_AVAILABLE;
 

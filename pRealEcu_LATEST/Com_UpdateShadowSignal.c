@@ -17,7 +17,7 @@ FUNC(void, COM_CODE) Com_UpdateShadowSignal(VAR(Com_SignalIdType, AUTOMATIC)  Si
    VAR(Com_SigMaxType, AUTOMATIC) TxNewVal;
    VAR(uint8, AUTOMATIC) ConstByteValue_u8;
    VAR(uint8, AUTOMATIC) Type;
-   VAR(Com_MainFuncType,AUTOMATIC) txMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC) txMainFuncId;
 
 #if(COM_CONFIGURATION_USE_DET == STD_ON)
    if(Com_Lok_DETCheck_Param_Ptr((SignalId >= COM_GET_NUM_TX_GRPSIGNALS),(SignalDataPtr == NULL_PTR)
@@ -52,12 +52,12 @@ FUNC(void, COM_CODE) Com_UpdateShadowSignal(VAR(Com_SignalIdType, AUTOMATIC)  Si
                 break;
             case COM_BOOLEAN:
 
-                TxNewVal = COM_BOOL_TO_UNSIGNED(*(P2CONST(boolean,AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
+                TxNewVal = COM_BOOL_TO_UNSIGNED(*(P2CONST(boolean, AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
                 break;
             case COM_UINT32:
             case COM_SINT32:
 
-                TxNewVal = *(P2CONST(uint32,AUTOMATIC,COM_APPL_DATA))SignalDataPtr;
+                TxNewVal = *(P2CONST(uint32, AUTOMATIC,COM_APPL_DATA))SignalDataPtr;
                 break;
 #ifdef COM_TXGRPSIG_INT64
             case COM_UINT64:
@@ -79,7 +79,7 @@ FUNC(void, COM_CODE) Com_UpdateShadowSignal(VAR(Com_SignalIdType, AUTOMATIC)  Si
 
                 SchM_Enter_Com_TxGrpSigBuffer();
                 COM_GET_TXGRPSIGTYPEFLOAT64_BUFF(txMainFuncId, TxGrpSigConstPtr->TxGrpSigBuff_Index) =
-                        *(P2CONST(float64,AUTOMATIC,COM_APPL_DATA))SignalDataPtr;
+                        *(P2CONST(float64, AUTOMATIC,COM_APPL_DATA))SignalDataPtr;
                 SchM_Exit_Com_TxGrpSigBuffer();
                 break;
 #endif

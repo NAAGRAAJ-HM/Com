@@ -11,7 +11,7 @@ VAR(Com_StatusType,COM_VAR)         Com_Uninit_Flag;
 
 #define COM_START_SEC_VAR_CLEARED_UNSPECIFIED
 #include "Com_MemMap.hpp"
-P2CONST(Com_ConfigData_tst,AUTOMATIC,COM_APPL_CONST) Com_Lok_Config_pcst;
+P2CONST(Com_ConfigData_tst, AUTOMATIC,COM_APPL_CONST) Com_Lok_Config_pcst;
 #define COM_STOP_SEC_VAR_CLEARED_UNSPECIFIED
 #include "Com_MemMap.hpp"
 

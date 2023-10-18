@@ -100,7 +100,7 @@ LOCAL_INLINE FUNC(uint8, COM_CODE) Com_Lok_SendDynSignal(   VAR(Com_SignalIdType
    if(Com_CheckTxIPduStatus((Type_CfgSwcServiceCom_tIdIPdu)IpduId_ui))
    {
 
-        VAR(Com_SendIpduInfo,AUTOMATIC) sendIpduFlag_u16 = COM_CLEAR_SENDIPDU_FLAGS;
+        VAR(Com_SendIpduInfo, AUTOMATIC) sendIpduFlag_u16 = COM_CLEAR_SENDIPDU_FLAGS;
 
         sendIpduFlag_u16.sigTransProp = isSigTriggered_u8;
 

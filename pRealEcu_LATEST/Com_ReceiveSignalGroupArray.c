@@ -9,9 +9,9 @@
 FUNC(uint8, COM_CODE) Com_ReceiveSignalGroupArray( Com_SignalGroupIdType SignalGroupId, uint8 * SignalGroupArrayPtr )
 {
    Com_RxSigGrpConstPtrType            RxSigGrpConstPtr;
-   VAR(uint8,AUTOMATIC)                returnValue_u8;
-   VAR(Com_MainFuncType,AUTOMATIC)     rxMainFuncId;
-   VAR(Type_CfgSwcServiceCom_tIdIPdu,AUTOMATIC)       IpduId_ui;
+   VAR(uint8, AUTOMATIC)                returnValue_u8;
+   VAR(Com_MainFuncType, AUTOMATIC)     rxMainFuncId;
+   VAR(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC)       IpduId_ui;
 
     returnValue_u8 = COM_SERVICE_NOT_AVAILABLE;
 
@@ -32,7 +32,7 @@ FUNC(uint8, COM_CODE) Com_ReceiveSignalGroupArray( Com_SignalGroupIdType SignalG
         if( Com_GetValue(RXSIGGRP,_ARRAYACCESS,RxSigGrpConstPtr->rxSignalGrpFields) )
         {
             Com_RxSigGrpArrayConstPtrType        RxSigGrpArrayConstPtr;
-            P2VAR(uint8,AUTOMATIC,COM_APPL_DATA) RxSigGrpArrayBufRamPtr;
+            P2VAR(uint8, AUTOMATIC,COM_APPL_DATA) RxSigGrpArrayBufRamPtr;
 
             RxSigGrpArrayConstPtr  = COM_GET_RXSIGGRP_ARRAY_CONSTDATA( RxSigGrpConstPtr->SigGrpArray_Index );
 
@@ -46,8 +46,8 @@ FUNC(uint8, COM_CODE) Com_ReceiveSignalGroupArray( Com_SignalGroupIdType SignalG
 
             SchM_Enter_Com_RxSigGrpArrayBuff();
 
-            Com_ByteCopy(   ( P2VAR(uint8,AUTOMATIC,COM_APPL_DATA) )( SignalGroupArrayPtr    )
-   ,     ( P2CONST(uint8,AUTOMATIC,COM_APPL_DATA) )( RxSigGrpArrayBufRamPtr )
+            Com_ByteCopy(   ( P2VAR(uint8, AUTOMATIC,COM_APPL_DATA) )( SignalGroupArrayPtr    )
+   ,     ( P2CONST(uint8, AUTOMATIC,COM_APPL_DATA) )( RxSigGrpArrayBufRamPtr )
    ,     ( uint32 )( RxSigGrpConstPtr->lastByte_u8 - RxSigGrpArrayConstPtr->FirstByteNo ) );
 
             SchM_Exit_Com_RxSigGrpArrayBuff();

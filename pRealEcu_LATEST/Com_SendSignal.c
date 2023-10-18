@@ -124,7 +124,7 @@ FUNC(uint8, COM_CODE) Com_InternalSendSignal(
    if(Com_CheckTxIPduStatus((Type_SwcServiceCom_tIdPdu)IpduId_ui))
    {
 
-        VAR(Com_SendIpduInfo,AUTOMATIC) sendIpduFlag_u16 = COM_CLEAR_SENDIPDU_FLAGS;
+        VAR(Com_SendIpduInfo, AUTOMATIC) sendIpduFlag_u16 = COM_CLEAR_SENDIPDU_FLAGS;
 
         sendIpduFlag_u16.sigTransProp = isSigTriggered_u8;
 
@@ -202,16 +202,16 @@ LOCAL_INLINE FUNC(Com_SigMaxType, COM_CODE) Com_Lok_SigBufftoIpduBuff(
         case COM_SINT8:
         case COM_UINT8:
 
-            TxSigNewVal = (Com_SigMaxType)(*(P2CONST(uint8,AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
+            TxSigNewVal = (Com_SigMaxType)(*(P2CONST(uint8, AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
             break;
         case COM_SINT16:
         case COM_UINT16:
 
-            TxSigNewVal = (Com_SigMaxType)(*(P2CONST(uint16,AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
+            TxSigNewVal = (Com_SigMaxType)(*(P2CONST(uint16, AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
             break;
         case COM_BOOLEAN:
 
-            TxSigNewVal = (Com_SigMaxType)COM_BOOL_TO_UNSIGNED(*(P2CONST(boolean,AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
+            TxSigNewVal = (Com_SigMaxType)COM_BOOL_TO_UNSIGNED(*(P2CONST(boolean, AUTOMATIC,COM_APPL_DATA))SignalDataPtr);
             break;
         case COM_SINT32:
         case COM_UINT32:

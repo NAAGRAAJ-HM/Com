@@ -22,7 +22,7 @@ FUNC(void, COM_CODE) Com_ReceptionDMControl(VAR(Com_IpduGroupVector, AUTOMATIC) 
    Com_RxIpduRamPtrType            RxIPduRamPtr;
    VAR(uint16_least, AUTOMATIC)    Index_u16;
 #endif
-   VAR(uint16,AUTOMATIC)           ByteNo_u16;
+   VAR(uint16, AUTOMATIC)           ByteNo_u16;
 
 #if(COM_CONFIGURATION_USE_DET == STD_ON)
    if(Com_Lok_DETCheck_Ptr( (ipduGroupVector == NULL_PTR), COMServiceId_ReceptionDMControl ))
@@ -86,12 +86,12 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_ProcessRxDMIPduGroupVector(
    P2CONST(Type_CfgSwcServiceCom_tIdIPdu, AUTOMATIC, COM_APPL_CONST)  IPduRefPtr;
 
    Com_IPduGrpConstPtrType                             IPduGrpConstPtr;
-   VAR(uint16_least,AUTOMATIC)                         Index_u16;
-   VAR(uint16_least,AUTOMATIC)                         NoOfPdus_u16;
+   VAR(uint16_least, AUTOMATIC)                         Index_u16;
+   VAR(uint16_least, AUTOMATIC)                         NoOfPdus_u16;
    VAR(Com_IpduGroupIdType, AUTOMATIC)                 IpduGrpId_u16;
    VAR(uint8, AUTOMATIC)                               ByteVal_u8;
-   VAR(uint8,AUTOMATIC)                                BitOffset_u8;
-   VAR(uint8,AUTOMATIC)                                PduCounterVal;
+   VAR(uint8, AUTOMATIC)                                BitOffset_u8;
+   VAR(uint8, AUTOMATIC)                                PduCounterVal;
 
    for(Index_u16 = 0; Index_u16 < COM_NUM_ARR_IPDUGRPVECT; Index_u16++)
    {

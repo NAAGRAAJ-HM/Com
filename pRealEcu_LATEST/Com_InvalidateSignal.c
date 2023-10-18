@@ -49,7 +49,7 @@ FUNC(uint8, COM_CODE) Com_InvalidateSignal(VAR(Com_SignalIdType, AUTOMATIC) Sign
 
                 if(type_u8 != (uint8)COM_UINT8_N)
                 {
-                    VAR(Com_SigMaxType,AUTOMATIC) txSigInvValue;
+                    VAR(Com_SigMaxType, AUTOMATIC) txSigInvValue;
 
                     txSigInvValue = (Com_SigMaxType)TxSigConstPtr->DataInvalid_Val;
 

@@ -249,8 +249,8 @@ extern FUNC(uint8, COM_CODE)    Com_InternalSendSignal( VAR(Com_SignalIdType, AU
    ,     P2CONST(void, AUTOMATIC, COM_APPL_DATA) SignalDataPtr );
 extern FUNC(uint8, COM_CODE)    Com_InternalSendSignalGroup(VAR(Com_SignalGroupIdType, AUTOMATIC) SignalGroupId);
 extern FUNC(void, COM_CODE)     Com_InternalInvalidateShadowSignal(VAR(Com_SignalIdType, AUTOMATIC) SignalId);
-extern FUNC(void, COM_CODE)     Com_InternalMainFunctionRx( VAR(Com_MainFuncType,AUTOMATIC) RxMainFuncId );
-extern FUNC(void, COM_CODE)     Com_InternalMainFunctionTx( VAR(Com_MainFuncType,AUTOMATIC) TxMainFuncId );
+extern FUNC(void, COM_CODE)     Com_InternalMainFunctionRx( VAR(Com_MainFuncType, AUTOMATIC) RxMainFuncId );
+extern FUNC(void, COM_CODE)     Com_InternalMainFunctionTx( VAR(Com_MainFuncType, AUTOMATIC) TxMainFuncId );
 
 extern VAR(Com_StatusType,COM_VAR)          Com_Uninit_Flag;
 extern VAR(Com_RxIpduRamData,COM_VAR)    Com_RxIpduRam_s[];
@@ -264,7 +264,7 @@ extern VAR(Com_IpduGroupVector, COM_VAR) Com_IpduGrpVector_DM;
 extern VAR(uint16,COM_VAR) Com_ReducedPeriod_u16;
 extern VAR(Type_SwcServiceCom_tIdPdu,COM_VAR)    Com_RxGwQueue_aux[];
 extern VAR(Com_RxGwQueueRAMType, COM_VAR) Com_RxGwQueue_S;
-extern P2CONST(Com_ConfigData_tst,AUTOMATIC,COM_APPL_CONST) Com_Lok_Config_pcst;
+extern P2CONST(Com_ConfigData_tst, AUTOMATIC,COM_APPL_CONST) Com_Lok_Config_pcst;
 extern CONST(Type_CfgSwcServiceCom_stInfoModeTrans ,COM_CONST) Com_NONE_TransModeInfo;
 extern CONST(Type_CfgSwcServiceCom_stInfoSignalTx,COM_CONST)         CfgSwcServiceCom_castListInfoSignalTx[];
 extern CONST(Type_CfgSwcServiceCom_stInfoSignalRx,COM_CONST)         CfgSwcServiceCom_castListInfoSignalRx[];

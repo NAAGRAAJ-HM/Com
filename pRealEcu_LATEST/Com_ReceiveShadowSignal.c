@@ -6,11 +6,11 @@
 #ifdef COM_RX_SIGNALGROUP
 LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_CopyData_UnsignedType( VAR(Com_SignalIdType, AUTOMATIC)      IntSignalId
    ,     P2VAR(void, AUTOMATIC, COM_APPL_DATA) SignalDataPtr
-   ,     VAR(Com_MainFuncType,AUTOMATIC)       RxMainFuncId );
+   ,     VAR(Com_MainFuncType, AUTOMATIC)       RxMainFuncId );
 
 LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_CopyData_SignedType(   VAR(Com_SignalIdType, AUTOMATIC)      IntSignalId
    ,     P2VAR(void, AUTOMATIC, COM_APPL_DATA) SignalDataPtr
-   ,     VAR(Com_MainFuncType,AUTOMATIC)       RxMainFuncId );
+   ,     VAR(Com_MainFuncType, AUTOMATIC)       RxMainFuncId );
 #endif
 
 #ifdef COM_RX_SIGNALGROUP
@@ -23,7 +23,7 @@ FUNC(void, COM_CODE) Com_ReceiveShadowSignal( VAR(Com_SignalIdType, AUTOMATIC)  
 
    Com_RxGrpSigConstPtrType                    RxGrpSigConstPtr;
    VAR(uint8, AUTOMATIC)                       SigType;
-   VAR(Com_MainFuncType,AUTOMATIC)             rxMainFuncId;
+   VAR(Com_MainFuncType, AUTOMATIC)             rxMainFuncId;
 
 #if(COM_CONFIGURATION_USE_DET == STD_ON)
 
@@ -55,7 +55,7 @@ FUNC(void, COM_CODE) Com_ReceiveShadowSignal( VAR(Com_SignalIdType, AUTOMATIC)  
 
 LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_CopyData_UnsignedType( VAR(Com_SignalIdType, AUTOMATIC)      IntSignalId
    ,     P2VAR(void, AUTOMATIC, COM_APPL_DATA) SignalDataPtr
-   ,     VAR(Com_MainFuncType,AUTOMATIC)       RxMainFuncId )
+   ,     VAR(Com_MainFuncType, AUTOMATIC)       RxMainFuncId )
 {
 
    Com_RxGrpSigConstPtrType                    RxGrpSigConstPtr;
@@ -173,7 +173,7 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_Lok_CopyData_UnsignedType( VAR(Com_SignalI
 
 LOCAL_INLINE FUNC(void, COM_CODE)  Com_Lok_CopyData_SignedType( VAR(Com_SignalIdType, AUTOMATIC)      IntSignalId
    ,     P2VAR(void, AUTOMATIC, COM_APPL_DATA) SignalDataPtr
-   ,     VAR(Com_MainFuncType,AUTOMATIC)       RxMainFuncId )
+   ,     VAR(Com_MainFuncType, AUTOMATIC)       RxMainFuncId )
 {
 
    Com_RxGrpSigConstPtrType                    RxGrpSigConstPtr;

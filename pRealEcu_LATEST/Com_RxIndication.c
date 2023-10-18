@@ -225,11 +225,11 @@ LOCAL_INLINE FUNC(void, COM_CODE) Com_ProcessRxIPduNotification( VAR(Type_SwcSer
 #define COM_START_SEC_CODE
 #include "Com_MemMap.hpp"
 FUNC(uint8, COM_CODE) Com_ReadRxIPduLength(
-                                VAR(Type_SwcServiceCom_tIdPdu,AUTOMATIC)                     RxPduId
-   ,     P2VAR(Type_SwcServiceCom_tLengthPdu,AUTOMATIC,COM_APPL_DATA) RxIPduLengthPtr
+                                VAR(Type_SwcServiceCom_tIdPdu, AUTOMATIC)                     RxPduId
+   ,     P2VAR(Type_SwcServiceCom_tLengthPdu, AUTOMATIC,COM_APPL_DATA) RxIPduLengthPtr
                                            )
 {
-   VAR(uint8,AUTOMATIC)  Status;
+   VAR(uint8, AUTOMATIC)  Status;
 
     Status = COM_SERVICE_NOT_AVAILABLE;
 
@@ -238,7 +238,7 @@ FUNC(uint8, COM_CODE) Com_ReadRxIPduLength(
    ,     COMServiceId_ReadRxIPduLength ))
 #endif
    {
-        VAR(Type_SwcServiceCom_tLengthPdu,AUTOMATIC)  RxIPduLength;
+        VAR(Type_SwcServiceCom_tLengthPdu, AUTOMATIC)  RxIPduLength;
 
         RxPduId       = COM_GET_RX_IPDU_ID(RxPduId);
         RxIPduLength  = 0u;
