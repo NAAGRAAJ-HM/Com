@@ -3,7 +3,7 @@
 
 #include "ComStack_Cfg.hpp"
 
-#define COMTYPE_VENDOR_ID 0x0006u
+#define COMTYPE_VENDOR_ID 0x0001u
 #define COMTYPE_MODULE_ID 0x00C4u
 #define COMTYPE_SW_MAJOR_VERSION 0x01u
 #define COMTYPE_SW_MINOR_VERSION 0x00u
