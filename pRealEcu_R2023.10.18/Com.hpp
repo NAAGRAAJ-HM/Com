@@ -12,87 +12,46 @@
 #endif
 
 #define COM_E_PARAM         0x01
-
 #define COM_E_UNINIT        0x02
-
 #define COM_E_PARAM_POINTER    0x03
-
 #define COM_SERVICE_NOT_AVAILABLE   0x80
-
 #define COM_BUSY                    0x81
-
 #define COM_INSTANCE_ID  0u
-
 #define COMServiceId_Init                       0x01
-
 #define COMServiceId_Deinit                     0x02
-
 #define COMServiceId_IpduGroupControl           0x03
-
 #define COMServiceId_ReceptionDMControl            0x06
-
 #define COMServiceId_GetStatus                  0x07
-
 #define COMServiceId_GetVersionInfo             0x09
-
 #define COMServiceId_SendSignal                 0x0a
-
 #define COMServiceId_ReceiveSignal              0x0b
-
 #define COMServiceId_ReceiveDynSignal           0x22
-
 #define COMServiceId_SendDynSignal              0x21
-
 #define COMServiceId_UpdateShadowSignal         0x0c
-
 #define COMServiceId_SendSignalGroup            0x0d
-
 #define COMServiceId_ReceiveSignalGroup         0x0e
-
 #define COMServiceId_ReceiveShadowSignal        0x0f
-
 #define COMServiceId_InvalidateSignal           0x10
-
 #define COMServiceId_InvalidateShadowSignal     0x16
-
 #define COMServiceId_InvalidateSignalGroup      0x1b
-
 #define COMServiceId_TriggerIpduSend            0x17
-
 #define COMServiceId_MainFunctionRx             0x18
-
 #define COMServiceId_MainFunctionTx             0x19
-
 #define COMServiceId_MainFunctionRouteSignals   0x1a
-
 #define COMServiceId_TxConfirmation             0x40
-
 #define COMServiceId_TriggerTransmit            0x41
-
 #define COMServiceId_RxIndication               0x42
-
 #define COMServiceId_ClearIpduGroupVector        0x1C
-
 #define COMServiceId_SetIpduGroup               0x1D
-
 #define COMServiceId_SwitchIpduTxMode           0x27
-
 #define COMServiceId_StartOfReception           0x25
-
 #define COMServiceId_CopyRxData                 0x44
-
 #define COMServiceId_CopyTxData                 0x43
-
 #define COMServiceId_TpRxIndication             0x1E
-
 #define COMServiceId_TpTxConfirmation           0x26
-
 #define COMServiceId_TriggerIPDUSendWithMetaData    0x28
-
 #define COMServiceId_SendSignalGroupArray       0x23
-
 #define COMServiceId_ReceiveSignalGroupArray    0x24
-
 #ifdef COM_RXIPDUCONTROL_VIA_RBA_NDS_ECUVARIANT
 
 #define COMServiceId_SetRxIPduControlViaRbaNdsEcuVariant       0x91
