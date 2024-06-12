@@ -170,4 +170,3 @@ FUNC(void, COM_CODE) Com_Lok_Init_TxSignal(
    }
 }
 
-

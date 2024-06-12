@@ -219,7 +219,6 @@ FUNC(Com_SigMaxType, COM_CODE) Com_UnpackSignal( VAR(uint8, AUTOMATIC)          
    ,     VAR(boolean, AUTOMATIC)                  IsSigned
 );
 
-
 FUNC(uint32, COM_CODE) Com_UnpackOpaqueSignal( VAR(Com_BitpositionType, AUTOMATIC)      Bit_Pos
    ,     VAR(Com_BitsizeType, AUTOMATIC)          SignalLength
    ,     P2CONST(uint8, AUTOMATIC, COM_APPL_DATA) Src_Buf
